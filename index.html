@@ -1,1600 +1,1567 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pendidikan Pancasila Kelas 1 SD - SD Tarakanita 3</title>
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Fonts: Comic Neue for playful kid aesthetic -->
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
-  
-  <style>
-    body {
-      font-family: 'Fredoka', 'Quicksand', sans-serif;
-      /* Red Plaid / Buffalo Check pattern generated to match the image */
-      background-color: #990000;
-      background-image: 
-        linear-gradient(90deg, rgba(0,0,0,0.65) 50%, transparent 50%),
-        linear-gradient(rgba(0,0,0,0.65) 50%, transparent 50%),
-        linear-gradient(90deg, rgba(255,255,255,0.15) 50%, transparent 50%),
-        linear-gradient(rgba(255,255,255,0.15) 50%, transparent 50%);
-      background-size: 80px 80px, 80px 80px, 40px 40px, 40px 40px;
-      min-height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendidikan Pancasila Kelas 1 - SD Tarakanita 3</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Fredoka / Nunito for Kids -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        taraRed: '#c8102e',
+                        taraDarkRed: '#8b0000',
+                        taraYellow: '#ffc72c',
+                        taraBlue: '#0055a5',
+                    },
+                    fontFamily: {
+                        fredoka: ['Fredoka', 'sans-serif'],
+                        nunito: ['Nunito', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
 
-    .main-wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-      background-color: #fff9f0;
-      border-left: 12px solid #e11d48;
-      border-right: 12px solid #e11d48;
-      box-shadow: 0 0 35px rgba(0,0,0,0.5);
-      min-height: 100vh;
-    }
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            /* Background Red Plaid Motif */
+            background-color: #800d0d;
+            background-image: 
+                linear-gradient(90deg, rgba(200, 16, 46, 0.85) 50%, transparent 50%),
+                linear-gradient(rgba(40, 40, 40, 0.75) 50%, transparent 50%),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.6) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.6) 75%),
+                linear-gradient(rgba(200, 16, 46, 0.8) 25%, transparent 25%, transparent 75%, rgba(200, 16, 46, 0.8) 75%);
+            background-size: 80px 80px;
+            background-attachment: fixed;
+        }
 
-    .btn-menu {
-      transition: all 0.25s ease;
-      box-shadow: 0 6px 0 rgba(0, 0, 0, 0.15);
-    }
-    .btn-menu:hover {
-      transform: translateY(-4px) scale(1.02);
-      box-shadow: 0 10px 0 rgba(0, 0, 0, 0.15);
-    }
-    .btn-menu:active {
-      transform: translateY(2px);
-      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
-    }
+        .font-kids {
+            font-family: 'Fredoka', cursive;
+        }
 
-    /* Swimming animation for fish game */
-    @keyframes swimRight {
-      0% { transform: translateX(-100px) scaleX(1); }
-      100% { transform: translateX(100%) scaleX(1); }
-    }
-    @keyframes swimLeft {
-      0% { transform: translateX(100vw) scaleX(-1); }
-      100% { transform: translateX(-100px) scaleX(-1); }
-    }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ffc72c;
+            border-radius: 10px;
+            border: 2px solid #fff;
+        }
 
-    .character-bounce {
-      animation: bounce 2s infinite;
-    }
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
+        /* Animations */
+        @keyframes bounce-slow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-bounce-slow {
+            animation: bounce-slow 2.5s infinite ease-in-out;
+        }
 
-    /* Custom scrollbars */
-    ::-webkit-scrollbar {
-      width: 10px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #f1f1f1;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #f43f5e;
-      border-radius: 5px;
-    }
-  </style>
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(255, 199, 44, 0.6); }
+            50% { box-shadow: 0 0 30px rgba(255, 199, 44, 1); }
+        }
+        .pulse-btn {
+            animation: pulse-glow 2s infinite;
+        }
+
+        /* Glassmorphism Effect */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-kids {
+            transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .btn-kids:hover {
+            transform: scale(1.04) translateY(-3px);
+        }
+        .btn-kids:active {
+            transform: scale(0.96) translateY(2px);
+        }
+    </style>
 </head>
-<body class="p-0 sm:p-4">
+<body class="min-h-screen p-2 md:p-6 flex flex-col justify-between items-center text-gray-800">
 
-<div class="main-wrapper flex flex-col justify-between min-h-screen relative overflow-hidden">
-  
-  <!-- Header Navbar -->
-  <header class="bg-gradient-to-r from-red-600 via-red-500 to-amber-500 text-white p-4 shadow-lg sticky top-0 z-50">
-    <div class="container mx-auto flex flex-wrap justify-between items-center gap-3">
-      <div class="flex items-center gap-3 cursor-pointer" onclick="showSection('beranda')">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlW5XwPhTaFrPdWZv-7Z-MGXxpddUawx4QVCRkET7D2Q&s=10" 
-             alt="Logo SD Tarakanita 3" 
-             class="w-14 h-14 bg-white p-1 rounded-full shadow-md object-contain border-2 border-yellow-300"
-             onerror="this.src='https://placehold.co/100x100/dc2626/ffffff?text=Tarakanita+3'">
-        <div>
-          <h1 class="text-xl sm:text-2xl font-bold tracking-wide text-yellow-200 drop-shadow">SD TARAKANITA 3</h1>
-          <p class="text-xs sm:text-sm font-semibold opacity-90">Pendidikan Pancasila - Kelas 1 SD</p>
-        </div>
-      </div>
-      
-      <button onclick="showSection('beranda')" class="bg-yellow-400 hover:bg-yellow-300 text-red-900 font-bold py-2 px-5 rounded-full shadow-md transition flex items-center gap-2">
-        <i class="fa-solid fa-house"></i> Beranda
-      </button>
-    </div>
-  </header>
-
-  <!-- Interactive Mascot Banner -->
-  <div class="bg-amber-100 border-b-4 border-amber-300 px-4 py-3 flex justify-around items-center overflow-x-auto gap-4 text-center">
-    <!-- Si Buku -->
-    <div class="flex items-center gap-2 character-bounce bg-white px-3 py-1.5 rounded-2xl shadow border border-amber-200 cursor-pointer" onclick="speakText('Halo kawan-kawan! Aku Si Buku. Mari belajar aturan di rumah dan di sekolah dengan gembira!')">
-      <div class="text-3xl">📖</div>
-      <div class="text-left">
-        <div class="text-xs font-bold text-red-600">Si Buku</div>
-        <div class="text-[10px] text-gray-600">Klik aku ya!</div>
-      </div>
-    </div>
-    <!-- Si Pensil -->
-    <div class="flex items-center gap-2 character-bounce bg-white px-3 py-1.5 rounded-2xl shadow border border-amber-200 cursor-pointer" style="animation-delay: 0.3s;" onclick="speakText('Aku Si Pensil! Siap mencatat semua ilmu pengetahuan baru hari ini!')">
-      <div class="text-3xl">✏️</div>
-      <div class="text-left">
-        <div class="text-xs font-bold text-blue-600">Si Pensil</div>
-        <div class="text-[10px] text-gray-600">Klik aku ya!</div>
-      </div>
-    </div>
-    <!-- Si Krayon -->
-    <div class="flex items-center gap-2 character-bounce bg-white px-3 py-1.5 rounded-2xl shadow border border-amber-200 cursor-pointer" style="animation-delay: 0.6s;" onclick="speakText('Hai! Aku Si Krayon. Mari mewarnai hari kita dengan perbuatan yang tertib!')">
-      <div class="text-3xl">🖍️</div>
-      <div class="text-left">
-        <div class="text-xs font-bold text-green-600">Si Krayon</div>
-        <div class="text-[10px] text-gray-600">Klik aku ya!</div>
-      </div>
-    </div>
-    <!-- Si Penghapus -->
-    <div class="flex items-center gap-2 character-bounce bg-white px-3 py-1.5 rounded-2xl shadow border border-amber-200 cursor-pointer" style="animation-delay: 0.9s;" onclick="speakText('Aku Si Penghapus! Jangan takut salah belajar, kita bisa perbaiki bersama!')">
-      <div class="text-3xl">🧹</div>
-      <div class="text-left">
-        <div class="text-xs font-bold text-purple-600">Si Penghapus</div>
-        <div class="text-[10px] text-gray-600">Klik aku ya!</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Main Content Body -->
-  <main class="flex-grow p-4 sm:p-6">
-
-    <!-- ==================== BERANDA ==================== -->
-    <section id="sec-beranda" class="space-y-6">
-      <div class="text-center my-4">
-        <span class="bg-red-100 text-red-700 font-bold px-4 py-1.5 rounded-full text-sm">Media Pembelajaran Interaktif</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-red-800 mt-2">Mari Belajar Aturan di Rumah & Sekolah!</h2>
-        <p class="text-gray-600 text-base max-w-xl mx-auto mt-1">Pilihlah salah satu tombol menu di bawah ini untuk memulai petualangan belajarmu:</p>
-      </div>
-
-      <!-- 11 Menu Buttons Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
+    <!-- Main Outer Container -->
+    <div class="w-full max-w-6xl glass-panel rounded-3xl shadow-2xl border-4 border-yellow-400 overflow-hidden my-auto flex flex-col min-h-[90vh]">
         
-        <!-- Button 1 -->
-        <button onclick="showSection('identitas')" class="btn-menu bg-gradient-to-br from-blue-500 to-indigo-600 text-white p-5 rounded-2xl text-left font-bold flex items-center gap-4">
-          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-id-card"></i></div>
-          <div>
-            <div class="text-lg">1. Identitas Kelas</div>
-            <div class="text-xs text-blue-100 font-normal">Informasi & Tujuan Pembelajaran</div>
-          </div>
-        </button>
+        <!-- Header Section -->
+        <header class="bg-gradient-to-r from-red-700 via-taraRed to-red-800 text-white p-4 md:p-6 shadow-md relative">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <!-- Logo & School Name -->
+                <div class="flex items-center gap-4">
+                    <div class="bg-white p-2 rounded-2xl shadow-lg border-2 border-yellow-300 transform hover:rotate-3 transition">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlW5XwPhTaFrPdWZv-7Z-MGXxpddUawx4QVCRkET7D2Q&s=10" 
+                             alt="Logo Tarakanita" class="h-14 md:h-16 w-auto object-contain"
+                             onerror="this.src='https://placehold.co/100x100/c8102e/ffffff?text=TARAKANITA';">
+                    </div>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-extrabold font-kids tracking-wide text-yellow-300 drop-shadow-md">
+                            SD TARAKANITA 3
+                        </h1>
+                        <p class="text-xs md:text-sm font-bold text-red-100 bg-red-900/40 px-3 py-1 rounded-full inline-block mt-1">
+                            🇲🇨 Pendidikan Pancasila • Kelas 1 SD Ganjil
+                        </p>
+                    </div>
+                </div>
 
-        <!-- Button 2 -->
-        <button onclick="showSection('aturan-rumah')" class="btn-menu bg-gradient-to-br from-emerald-500 to-teal-600 text-white p-5 rounded-2xl text-left font-bold flex items-center gap-4">
-          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-house-user"></i></div>
-          <div>
-            <div class="text-lg">2. Aturan di Rumah</div>
-            <div class="text-xs text-teal-100 font-normal">Contoh & Gambar Aturan Rumah</div>
-          </div>
-        </button>
-
-        <!-- Button 3 -->
-        <button onclick="showSection('aturan-sekolah')" class="btn-menu bg-gradient-to-br from-amber-500 to-orange-600 text-white p-5 rounded-2xl text-left font-bold flex items-center gap-4">
-          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-school"></i></div>
-          <div>
-            <div class="text-lg">3. Aturan di Sekolah</div>
-            <div class="text-xs text-amber-100 font-normal">Pentingnya & Contoh Aturan Sekolah</div>
-          </div>
-        </button>
-
-        <!-- Button 4 -->
-        <button onclick="showSection('manfaat-aturan')" class="btn-menu bg-gradient-to-br from-purple-500 to-pink-600 text-white p-5 rounded-2xl text-left font-bold flex items-center gap-4">
-          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-heart"></i></div>
-          <div>
-            <div class="text-lg">4. Manfaat Aturan</div>
-            <div class="text-xs text-purple-100 font-normal">Manfaat di Rumah & Sekolah</div>
-          </div>
-        </button>
-
-        <!-- Button 5 -->
-        <button onclick="showSection('nilai-tarakanita')" class="btn-menu bg-gradient-to-br from-rose-600 to-red-700 text-white p-5 rounded-2xl text-left font-bold flex items-center gap-4">
-          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-star"></i></div>
-          <div>
-            <div class="text-lg">5. Nilai Tarakanita</div>
-            <div class="text-xs text-rose-100 font-normal">Conviction, Competence, Community</div>
-          </div>
-        </button>
-
-        <!-- Button 6 -->
-        <button onclick="showSection('video-pembelajaran')" class="btn-menu bg-gradient-to-br from-red-500 to-rose-600 text-white p-5 rounded-2xl text-left font-bold flex items-center gap-4">
-          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-circle-play"></i></div>
-          <div>
-            <div class="text-lg">6. Video Pembelajaran</div>
-            <div class="text-xs text-red-100 font-normal">Tonton Video Edukasi Seru</div>
-          </div>
-        </button>
-
-        <!-- Button 7 -->
-        <button onclick="showSection('latihan-linuris')" class="btn-menu bg-gradient-to-br from-cyan-600 to-blue-700 text-white p-5 rounded-2xl text-left font-bold flex items-center gap-4">
-          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-brain"></i></div>
-          <div>
-            <div class="text-lg">7. Latihan Soal Linuris</div>
-            <div class="text-xs text-cyan-100 font-normal">Literasi, Numerasi & Riset</div>
-          </div>
-        </button>
-
-        <!-- Button 8 -->
-        <button onclick="showSection('game-sekolah')" class="btn-menu bg-gradient-to-br from-fuchsia-600 to-purple-700 text-white p-5 rounded-2xl text-left font-bold flex items-center gap-4">
-          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-gamepad"></i></div>
-          <div>
-            <div class="text-lg">8. Game Aturan Sekolah</div>
-            <div class="text-xs text-fuchsia-100 font-normal">Permainan Interaktif Wordwall</div>
-          </div>
-        </button>
-
-        <!-- Button 9 -->
-        <button onclick="showSection('game-rumah')" class="btn-menu bg-gradient-to-br from-sky-500 to-blue-600 text-white p-5 rounded-2xl text-left font-bold flex items-center gap-4">
-          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-fish"></i></div>
-          <div>
-            <div class="text-lg">9. Game Aturan Rumah</div>
-            <div class="text-xs text-sky-100 font-normal">Permainan Memancing (1P & 2P)</div>
-          </div>
-        </button>
-
-        <!-- Button 10 -->
-        <button onclick="showSection('tes-formatif')" class="btn-menu bg-gradient-to-br from-lime-600 to-green-700 text-white p-5 rounded-2xl text-left font-bold flex items-center gap-4">
-          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-clipboard-check"></i></div>
-          <div>
-            <div class="text-lg">10. Tes Formatif</div>
-            <div class="text-xs text-lime-100 font-normal">Uji Pemahaman Siswa</div>
-          </div>
-        </button>
-
-        <!-- Button 11 -->
-        <button onclick="showSection('refleksi')" class="btn-menu bg-gradient-to-br from-yellow-500 to-amber-600 text-white p-5 rounded-2xl text-left font-bold flex items-center gap-4 sm:col-span-2 lg:col-span-1">
-          <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-face-smile"></i></div>
-          <div>
-            <div class="text-lg">11. Refleksi</div>
-            <div class="text-xs text-yellow-100 font-normal">Ungkapkan Perasaan Belajarmu</div>
-          </div>
-        </button>
-
-      </div>
-    </section>
-
-    <!-- ==================== SECTION 1: IDENTITAS KELAS ==================== -->
-    <section id="sec-identitas" class="hidden space-y-6">
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border-4 border-blue-200">
-        <div class="flex justify-between items-center border-b pb-4 mb-6">
-          <h2 class="text-2xl sm:text-3xl font-bold text-blue-800 flex items-center gap-3">
-            <i class="fa-solid fa-id-card text-blue-600"></i> Identitas Kelas
-          </h2>
-          <button onclick="speakText('Identitas Kelas. Jenjang Kelas: Kelas 1 SD. Semester Ganjil. Mata Pelajaran Pendidikan Pancasila. Materi: Aturan di Rumah dan Sekolah.')" class="bg-blue-100 hover:bg-blue-200 text-blue-800 p-2 rounded-full px-4 text-sm font-semibold flex items-center gap-2">
-            <i class="fa-solid fa-volume-high"></i> Bacakan
-          </button>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="space-y-4">
-            <div class="bg-blue-50 p-4 rounded-2xl border border-blue-100">
-              <span class="text-xs font-bold text-blue-500 uppercase">Informasi Umum</span>
-              <ul class="mt-2 space-y-2 text-gray-700">
-                <li><strong>Jenjang Kelas:</strong> Kelas 1 SD</li>
-                <li><strong>Semester:</strong> Ganjil</li>
-                <li><strong>Mata Pelajaran:</strong> Pendidikan Pancasila</li>
-                <li><strong>Materi Utama:</strong> Aturan di Rumah dan di Sekolah</li>
-              </ul>
+                <!-- Back to Home / Title Badge -->
+                <div class="flex items-center gap-2">
+                    <button id="btn-home-nav" onclick="showSection('home')" class="hidden bg-yellow-400 hover:bg-yellow-300 text-red-900 font-bold px-4 py-2 rounded-2xl shadow-lg text-sm md:text-base flex items-center gap-2 transition btn-kids">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Beranda Utama</span>
+                    </button>
+                </div>
             </div>
+        </header>
 
-            <div class="bg-amber-50 p-4 rounded-2xl border border-amber-100">
-              <span class="text-xs font-bold text-amber-600 uppercase">Tujuan Pembelajaran</span>
-              <p class="mt-2 text-gray-700 font-medium">1. Mengidentifikasi aturan di rumah dan di sekolah.</p>
-            </div>
-          </div>
+        <!-- Content Area -->
+        <main class="flex-1 p-4 md:p-8 overflow-y-auto">
 
-          <div class="space-y-4">
-            <div class="bg-red-50 p-4 rounded-2xl border border-red-100">
-              <span class="text-xs font-bold text-red-600 uppercase">Nilai-Nilai Ketarakanitaan</span>
-              <div class="flex flex-wrap gap-2 mt-2">
-                <span class="bg-red-200 text-red-800 font-bold px-3 py-1 rounded-full text-sm">Competence</span>
-                <span class="bg-red-200 text-red-800 font-bold px-3 py-1 rounded-full text-sm">Compassion</span>
-                <span class="bg-red-200 text-red-800 font-bold px-3 py-1 rounded-full text-sm">Community</span>
-              </div>
-            </div>
+            <!-- SECTION 0: BERANDA (HOME) -->
+            <section id="sec-home" class="space-y-8">
+                
+                <!-- Welcome Title & Mascot Area -->
+                <div class="bg-gradient-to-r from-amber-100 via-orange-50 to-yellow-100 p-6 rounded-3xl border-2 border-amber-300 shadow-inner relative overflow-hidden text-center">
+                    <h2 class="text-2xl md:text-4xl font-black font-kids text-red-800 mb-2">
+                        🌟 Belajar Aturan di Rumah & Sekolah 🌟
+                    </h2>
+                    <p class="text-sm md:text-base text-gray-700 font-medium max-w-2xl mx-auto">
+                        Ayo belajar bersama karakter ceria Tarakanita! Klik tombol di bawah ini untuk memulai petualangan serumu.
+                    </p>
 
-            <div class="bg-purple-50 p-4 rounded-2xl border border-purple-100">
-              <span class="text-xs font-bold text-purple-600 uppercase">Pembelajaran Terintegrasi</span>
-              <div class="grid grid-cols-3 gap-2 mt-2 text-center">
-                <div class="bg-white p-2 rounded-xl shadow-sm text-xs font-bold text-purple-700">Literasi</div>
-                <div class="bg-white p-2 rounded-xl shadow-sm text-xs font-bold text-purple-700">Numerasi</div>
-                <div class="bg-white p-2 rounded-xl shadow-sm text-xs font-bold text-purple-700">Riset</div>
-              </div>
-            </div>
-          </div>
-        </div>
+                    <!-- Interactive Mascot Friends -->
+                    <div class="mt-6 flex flex-wrap justify-center items-center gap-4 md:gap-8">
+                        <!-- Si Buku -->
+                        <div onclick="mascotTalk('Si Buku', 'Halo teman-teman! Yuk rajin membaca dan ikuti aturan di kelas! 📚')" 
+                             class="cursor-pointer bg-white p-3 rounded-2xl shadow-md border-2 border-blue-400 hover:border-blue-600 transition transform hover:scale-110 animate-bounce-slow flex flex-col items-center group">
+                            <span class="text-4xl group-hover:scale-125 transition">📚</span>
+                            <span class="text-xs font-bold text-blue-700 mt-1">Si Buku</span>
+                        </div>
+                        <!-- Si Pensil -->
+                        <div onclick="mascotTalk('Si Pensil', 'Hi! Aku Si Pensil. Jangan lupa datang tepat waktu ya! ✏️')" 
+                             class="cursor-pointer bg-white p-3 rounded-2xl shadow-md border-2 border-yellow-400 hover:border-yellow-600 transition transform hover:scale-110 animate-bounce-slow flex flex-col items-center group" style="animation-delay: 0.2s;">
+                            <span class="text-4xl group-hover:scale-125 transition">✏️</span>
+                            <span class="text-xs font-bold text-yellow-700 mt-1">Si Pensil</span>
+                        </div>
+                        <!-- Si Krayon -->
+                        <div onclick="mascotTalk('Si Krayon', 'Warna-warni harimu dengan melakukan kebaikan di rumah! 🖍️')" 
+                             class="cursor-pointer bg-white p-3 rounded-2xl shadow-md border-2 border-red-400 hover:border-red-600 transition transform hover:scale-110 animate-bounce-slow flex flex-col items-center group" style="animation-delay: 0.4s;">
+                            <span class="text-4xl group-hover:scale-125 transition">🖍️</span>
+                            <span class="text-xs font-bold text-red-700 mt-1">Si Krayon</span>
+                        </div>
+                        <!-- Si Penghapus -->
+                        <div onclick="mascotTalk('Si Penghapus', 'Kalau salah jangan takut, kita bisa belajar lagi bareng-bareng! 🧽')" 
+                             class="cursor-pointer bg-white p-3 rounded-2xl shadow-md border-2 border-pink-400 hover:border-pink-600 transition transform hover:scale-110 animate-bounce-slow flex flex-col items-center group" style="animation-delay: 0.6s;">
+                            <span class="text-4xl group-hover:scale-125 transition">🧽</span>
+                            <span class="text-xs font-bold text-pink-700 mt-1">Si Penghapus</span>
+                        </div>
+                    </div>
 
-        <div class="mt-8 text-center">
-          <button onclick="showSection('beranda')" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-full">
-            <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
-          </button>
-        </div>
-      </div>
-    </section>
+                    <!-- Mascot Speech Bubble Output -->
+                    <div id="mascot-speech" class="mt-4 hidden bg-white border-2 border-amber-400 text-amber-900 px-4 py-2 rounded-2xl inline-block shadow-md text-sm md:text-base font-bold animate-pulse">
+                        <span id="mascot-speech-text"></span>
+                    </div>
+                </div>
 
-    <!-- ==================== SECTION 2: ATURAN DI RUMAH ==================== -->
-    <section id="sec-aturan-rumah" class="hidden space-y-6">
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border-4 border-emerald-200">
-        <div class="flex justify-between items-center border-b pb-4 mb-4">
-          <h2 class="text-2xl sm:text-3xl font-bold text-emerald-800 flex items-center gap-3">
-            <i class="fa-solid fa-house-user text-emerald-600"></i> Contoh Aturan di Rumah
-          </h2>
-          <button onclick="speakText('Aturan adalah petunjuk atau tata tertib yang harus kita patuhi agar hidup tertib dan teratur.')" class="bg-emerald-100 hover:bg-emerald-200 text-emerald-800 p-2 rounded-full px-4 text-sm font-semibold flex items-center gap-2">
-            <i class="fa-solid fa-volume-high"></i> Suara Definisi
-          </button>
-        </div>
+                <!-- 11 Main Navigation Buttons Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    
+                    <!-- Button 1: Identitas Kelas -->
+                    <button onclick="showSection('identitas')" class="btn-kids p-5 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-kids shadow-lg flex flex-col items-center justify-center text-center space-y-2 border-b-4 border-indigo-800">
+                        <i class="fa-solid fa-address-card text-3xl"></i>
+                        <span class="text-lg">1. Identitas Kelas</span>
+                    </button>
 
-        <!-- Definisi Sederhana -->
-        <div class="bg-emerald-50 border-l-8 border-emerald-500 p-4 rounded-r-2xl mb-6">
-          <h3 class="font-bold text-emerald-900 text-lg">Apa itu Aturan?</h3>
-          <p class="text-gray-700 mt-1">
-            <strong>Aturan</strong> adalah petunjuk atau tata tertib yang dibuat agar kehidupan kita menjadi rapi, aman, tenteram, dan teratur.
-          </p>
-        </div>
+                    <!-- Button 2: Contoh Aturan di Rumah -->
+                    <button onclick="showSection('aturan-rumah')" class="btn-kids p-5 rounded-2xl bg-gradient-to-br from-emerald-500 to-green-600 text-white font-kids shadow-lg flex flex-col items-center justify-center text-center space-y-2 border-b-4 border-green-800">
+                        <i class="fa-solid fa-house-user text-3xl"></i>
+                        <span class="text-lg">2. Aturan di Rumah</span>
+                    </button>
 
-        <!-- 6 Contoh Aturan Rumah -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-          <!-- Contoh 1 -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
-            <img src="https://cdn.medcom.id/dynamic/content/2018/10/09/938581/tsPB701GqV.jpg?w=700" 
-                 alt="Tidur malam tepat waktu" class="w-full h-48 object-cover"
-                 onerror="this.src='https://placehold.co/400x300/34d399/ffffff?text=Tidur+Malam+Tepat+Waktu'">
-            <div class="p-4">
-              <h4 class="font-bold text-emerald-800 text-lg mb-1">1. Tidur Malam Tepat Waktu</h4>
-              <p class="text-gray-600 text-sm mb-3">Tidur tidak terlalu malam agar tubuh kita sehat, cukup istirahat, dan tidak terlambat bangun pagi.</p>
-              <button onclick="speakText('Contoh pertama: Tidur malam tepat waktu. Tidur tidak terlalu malam agar tubuh sehat dan tidak terlambat bangun.')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 rounded-xl text-xs flex items-center justify-center gap-2">
-                <i class="fa-solid fa-volume-high"></i> Dengarkan
-              </button>
-            </div>
-          </div>
+                    <!-- Button 3: Contoh Aturan di Sekolah -->
+                    <button onclick="showSection('aturan-sekolah')" class="btn-kids p-5 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 text-white font-kids shadow-lg flex flex-col items-center justify-center text-center space-y-2 border-b-4 border-orange-800">
+                        <i class="fa-solid fa-school text-3xl"></i>
+                        <span class="text-lg">3. Aturan di Sekolah</span>
+                    </button>
 
-          <!-- Contoh 2 -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
-            <img src="https://assets-a1.kompasiana.com/items/album/2024/12/22/screenshot-20241222-193649-67680c33ed641558a82e0ca3.jpg" 
-                 alt="Merapikan tempat tidur" class="w-full h-48 object-cover"
-                 onerror="this.src='https://placehold.co/400x300/34d399/ffffff?text=Merapikan+Tempat+Tidur'">
-            <div class="p-4">
-              <h4 class="font-bold text-emerald-800 text-lg mb-1">2. Merapikan Tempat Tidur</h4>
-              <p class="text-gray-600 text-sm mb-3">Setelah bangun tidur, kita melipat selimut dan merapikan bantal agar kamar bersih dan rapi.</p>
-              <button onclick="speakText('Contoh kedua: Setelah bangun tidur harus merapikan tempat tidur agar kamar bersih dan nyaman.')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 rounded-xl text-xs flex items-center justify-center gap-2">
-                <i class="fa-solid fa-volume-high"></i> Dengarkan
-              </button>
-            </div>
-          </div>
+                    <!-- Button 4: Manfaat Aturan -->
+                    <button onclick="showSection('manfaat')" class="btn-kids p-5 rounded-2xl bg-gradient-to-br from-purple-500 to-fuchsia-600 text-white font-kids shadow-lg flex flex-col items-center justify-center text-center space-y-2 border-b-4 border-fuchsia-800">
+                        <i class="fa-solid fa-heart-circle-check text-3xl"></i>
+                        <span class="text-lg">4. Manfaat Aturan</span>
+                    </button>
 
-          <!-- Contoh 3 -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
-            <img src="https://assets-a1.kompasiana.com/items/album/2023/10/04/cara-pendampingan-orang-tua-pada-anak-yang-malas-belajar-kibrispdr-651d1772ee794a2350045d14.jpg?t=o&v=770" 
-                 alt="Belajar bersama orang tua" class="w-full h-48 object-cover"
-                 onerror="this.src='https://placehold.co/400x300/34d399/ffffff?text=Belajar+Bersama+Orang+Tua'">
-            <div class="p-4">
-              <h4 class="font-bold text-emerald-800 text-lg mb-1">3. Belajar Mandiri atau Bersama Orang Tua</h4>
-              <p class="text-gray-600 text-sm mb-3">Mengulang pelajaran di rumah dan mengerjakan PR dengan tekun agar semakin pintar.</p>
-              <button onclick="speakText('Contoh ketiga: Belajar bersama orang tua atau mandiri di rumah agar paham pelajaran.')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 rounded-xl text-xs flex items-center justify-center gap-2">
-                <i class="fa-solid fa-volume-high"></i> Dengarkan
-              </button>
-            </div>
-          </div>
+                    <!-- Button 5: Nilai Tarakanita -->
+                    <button onclick="showSection('tarakanita')" class="btn-kids p-5 rounded-2xl bg-gradient-to-br from-red-500 to-rose-700 text-white font-kids shadow-lg flex flex-col items-center justify-center text-center space-y-2 border-b-4 border-red-900">
+                        <i class="fa-solid fa-star text-3xl"></i>
+                        <span class="text-lg">5. Nilai Tarakanita</span>
+                    </button>
 
-          <!-- Contoh 4 -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
-            <img src="https://st.depositphotos.com/1007989/3205/i/450/depositphotos_32058349-stock-illustration-kid-boy-storing-toys.jpg" 
-                 alt="Merapikan mainan" class="w-full h-48 object-cover"
-                 onerror="this.src='https://placehold.co/400x300/34d399/ffffff?text=Merapikan+Mainan'">
-            <div class="p-4">
-              <h4 class="font-bold text-emerald-800 text-lg mb-1">4. Merapikan Mainan Selesai Bermain</h4>
-              <p class="text-gray-600 text-sm mb-3">Mengembalikan mainan ke kotak penyimpanan agar rumah tidak berantakan dan mainan tidak hilang.</p>
-              <button onclick="speakText('Contoh keempat: Setelah bermain harus merapikan mainannya kembali agar rumah tetap bersih.')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 rounded-xl text-xs flex items-center justify-center gap-2">
-                <i class="fa-solid fa-volume-high"></i> Dengarkan
-              </button>
-            </div>
-          </div>
+                    <!-- Button 6: Video Pembelajaran -->
+                    <button onclick="showSection('video')" class="btn-kids p-5 rounded-2xl bg-gradient-to-br from-rose-500 to-red-600 text-white font-kids shadow-lg flex flex-col items-center justify-center text-center space-y-2 border-b-4 border-red-800">
+                        <i class="fa-solid fa-circle-play text-3xl"></i>
+                        <span class="text-lg">6. Video Belajar</span>
+                    </button>
 
-          <!-- Contoh 5 -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
-            <img src="https://teman.marica.id/upload/media/entries/2024-03/01/104-entry-1-1709277742.jpg" 
-                 alt="Berpamitan kepada orang tua" class="w-full h-48 object-cover"
-                 onerror="this.src='https://placehold.co/400x300/34d399/ffffff?text=Berpamitan+Kepada+Orang+Tua'">
-            <div class="p-4">
-              <h4 class="font-bold text-emerald-800 text-lg mb-1">5. Berpamitan Sebelum Pergi</h4>
-              <p class="text-gray-600 text-sm mb-3">Mencium tangan dan mengucap salam kepada orang tua sebelum berangkat ke sekolah atau bermain.</p>
-              <button onclick="speakText('Contoh kelima: Berpamitan kepada orang tua sebelum pergi keluar rumah.')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 rounded-xl text-xs flex items-center justify-center gap-2">
-                <i class="fa-solid fa-volume-high"></i> Dengarkan
-              </button>
-            </div>
-          </div>
+                    <!-- Button 7: Latihan Soal Linuris -->
+                    <button onclick="showSection('linuris')" class="btn-kids p-5 rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-600 text-white font-kids shadow-lg flex flex-col items-center justify-center text-center space-y-2 border-b-4 border-cyan-800">
+                        <i class="fa-solid fa-pen-ruler text-3xl"></i>
+                        <span class="text-lg">7. Soal Linuris</span>
+                    </button>
 
-          <!-- Contoh 6 -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
-            <img src="https://klinikgigiklaten.com/wp-content/uploads/2024/08/sblm-tdr.jpg" 
-                 alt="Sikat gigi sebelum tidur" class="w-full h-48 object-cover"
-                 onerror="this.src='https://placehold.co/400x300/34d399/ffffff?text=Sikat+Gigi+Sebelum+Tidur'">
-            <div class="p-4">
-              <h4 class="font-bold text-emerald-800 text-lg mb-1">6. Sikat Gigi Sebelum Tidur</h4>
-              <p class="text-gray-600 text-sm mb-3">Menggosok gigi dengan bersih sebelum tidur malam agar gigi sehat dan terhindar dari kuman.</p>
-              <button onclick="speakText('Contoh keenam: Sikat gigi sebelum tidur malam agar gigi terlindung dari kuman.')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 rounded-xl text-xs flex items-center justify-center gap-2">
-                <i class="fa-solid fa-volume-high"></i> Dengarkan
-              </button>
-            </div>
-          </div>
+                    <!-- Button 8: Permainan Aturan di Sekolah -->
+                    <button onclick="showSection('game-sekolah')" class="btn-kids p-5 rounded-2xl bg-gradient-to-br from-teal-500 to-emerald-600 text-white font-kids shadow-lg flex flex-col items-center justify-center text-center space-y-2 border-b-4 border-emerald-800">
+                        <i class="fa-solid fa-gamepad text-3xl"></i>
+                        <span class="text-lg">8. Game Sekolah</span>
+                    </button>
 
-        </div>
+                    <!-- Button 9: Permainan Aturan di Rumah -->
+                    <button onclick="showSection('game-mancing')" class="btn-kids p-5 rounded-2xl bg-gradient-to-br from-yellow-500 to-amber-600 text-white font-kids shadow-lg flex flex-col items-center justify-center text-center space-y-2 border-b-4 border-amber-800 pulse-btn">
+                        <i class="fa-solid fa-fish text-3xl"></i>
+                        <span class="text-lg">9. Game Memancing</span>
+                    </button>
 
-        <div class="mt-8 text-center">
-          <button onclick="showSection('beranda')" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-full">
-            <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
-          </button>
-        </div>
-      </div>
-    </section>
+                    <!-- Button 10: Tes Formatif -->
+                    <button onclick="showSection('formatif')" class="btn-kids p-5 rounded-2xl bg-gradient-to-br from-violet-600 to-purple-800 text-white font-kids shadow-lg flex flex-col items-center justify-center text-center space-y-2 border-b-4 border-purple-950">
+                        <i class="fa-solid fa-clipboard-check text-3xl"></i>
+                        <span class="text-lg">10. Tes Formatif</span>
+                    </button>
 
-    <!-- ==================== SECTION 3: ATURAN DI SEKOLAH ==================== -->
-    <section id="sec-aturan-sekolah" class="hidden space-y-6">
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border-4 border-amber-200">
-        <div class="flex justify-between items-center border-b pb-4 mb-4">
-          <h2 class="text-2xl sm:text-3xl font-bold text-amber-800 flex items-center gap-3">
-            <i class="fa-solid fa-school text-amber-600"></i> Contoh Aturan di Sekolah
-          </h2>
-          <button onclick="speakText('Pentingnya aturan di sekolah adalah menjaga suasana belajar tetap tenang, aman, disiplin, dan menyenangkan bagi semua siswa.')" class="bg-amber-100 hover:bg-amber-200 text-amber-800 p-2 rounded-full px-4 text-sm font-semibold flex items-center gap-2">
-            <i class="fa-solid fa-volume-high"></i> Suara Pentingnya Aturan
-          </button>
-        </div>
+                    <!-- Button 11: Refleksi -->
+                    <button onclick="showSection('refleksi')" class="btn-kids p-5 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 text-white font-kids shadow-lg flex flex-col items-center justify-center text-center space-y-2 border-b-4 border-rose-800">
+                        <i class="fa-solid fa-face-smile text-3xl"></i>
+                        <span class="text-lg">11. Refleksi</span>
+                    </button>
 
-        <!-- Pentingnya Aturan di Sekolah -->
-        <div class="bg-amber-50 border-l-8 border-amber-500 p-4 rounded-r-2xl mb-6">
-          <h3 class="font-bold text-amber-900 text-lg">Pentingnya Aturan di Sekolah</h3>
-          <p class="text-gray-700 mt-1">
-            Aturan di sekolah sangat penting agar kelas tertib, kegiatan belajar berjalan lancar, dan semua teman merasa nyaman serta aman saat bersekolah bersama.
-          </p>
-        </div>
+                </div>
+            </section>
 
-        <!-- 6 Contoh Aturan Sekolah -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          
-          <!-- Contoh 1 -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
-            <img src="https://assets-a1.kompasiana.com/items/album/2021/01/11/anak-pergi-ke-sekolah-5ffc7be48ede4828656a82b2.jpg" 
-                 alt="Tiba di sekolah tepat waktu" class="w-full h-48 object-cover"
-                 onerror="this.src='https://placehold.co/400x300/f59e0b/ffffff?text=Tiba+Tepat+Waktu'">
-            <div class="p-4">
-              <h4 class="font-bold text-amber-800 text-lg mb-1">1. Tiba di Sekolah Tepat Waktu</h4>
-              <p class="text-gray-600 text-sm mb-3">Datang sebelum bel masuk berbunyi agar tidak ketinggalan pelajaran dan membiasakan diri disiplin.</p>
-              <button onclick="speakText('Contoh pertama: Tiba di sekolah tepat waktu agar tidak ketinggalan pelajaran.')" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 rounded-xl text-xs flex items-center justify-center gap-2">
-                <i class="fa-solid fa-volume-high"></i> Dengarkan
-              </button>
-            </div>
-          </div>
+            <!-- SECTION 1: IDENTITAS KELAS -->
+            <section id="sec-identitas" class="hidden space-y-6">
+                <div class="border-b-4 border-blue-500 pb-3 flex items-center justify-between">
+                    <h2 class="text-2xl md:text-3xl font-black font-kids text-blue-800 flex items-center gap-3">
+                        <i class="fa-solid fa-address-card text-blue-600"></i> Identitas Kelas
+                    </h2>
+                    <button onclick="readText('Identitas Kelas. Jenjang Kelas 1 SD, Semester Ganjil, Mata Pelajaran Pendidikan Pancasila.')" class="bg-blue-100 hover:bg-blue-200 text-blue-700 px-3 py-1 rounded-xl text-sm font-bold">
+                        <i class="fa-solid fa-volume-high"></i> Baca
+                    </button>
+                </div>
 
-          <!-- Contoh 2 -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
-            <img src="https://assets-a1.kompasiana.com/items/album/2023/07/17/whatsapp-image-2023-07-13-at-12-58-31-64b4d97508a8b50dc92338d2.jpeg?t=o&v=770" 
-                 alt="Memakai seragam rapi" class="w-full h-48 object-cover"
-                 onerror="this.src='https://placehold.co/400x300/f59e0b/ffffff?text=Memakai+Seragam+Rapi'">
-            <div class="p-4">
-              <h4 class="font-bold text-amber-800 text-lg mb-1">2. Memakai Seragam Lengkap & Rapi</h4>
-              <p class="text-gray-600 text-sm mb-3">Memakai pakaian seragam sesuai jadwal dengan bersih, rapi, dan menggunakan atribut lengkap.</p>
-              <button onclick="speakText('Contoh kedua: Memakai seragam dengan rapi dan sesuai dengan jadwal sekolah.')" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 rounded-xl text-xs flex items-center justify-center gap-2">
-                <i class="fa-solid fa-volume-high"></i> Dengarkan
-              </button>
-            </div>
-          </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-blue-50 p-6 rounded-2xl border-2 border-blue-200 space-y-4 shadow-sm">
+                        <h3 class="text-xl font-bold font-kids text-blue-900 border-b pb-2">📋 Informasi Pembelajaran</h3>
+                        <ul class="space-y-3 text-base">
+                            <li class="flex items-center gap-2"><strong class="w-36 text-blue-800">Jenjang Class:</strong> <span>Kelas 1 SD</span></li>
+                            <li class="flex items-center gap-2"><strong class="w-36 text-blue-800">Semester:</strong> <span>Ganjil</span></li>
+                            <li class="flex items-center gap-2"><strong class="w-36 text-blue-800">Mata Pelajaran:</strong> <span>Pendidikan Pancasila</span></li>
+                            <li class="flex items-center gap-2"><strong class="w-36 text-blue-800">Materi Pokok:</strong> <span>Aturan di Rumah dan Sekolah</span></li>
+                        </ul>
+                    </div>
 
-          <!-- Contoh 3 -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
-            <img src="https://st4.depositphotos.com/5425740/38466/v/1600/depositphotos_384667358-stock-illustration-classroom-pupils-teacher-lesson-classroom.jpg" 
-                 alt="Menyimak guru" class="w-full h-48 object-cover"
-                 onerror="this.src='https://placehold.co/400x300/f59e0b/ffffff?text=Menyimak+Penjelasan+Guru'">
-            <div class="p-4">
-              <h4 class="font-bold text-amber-800 text-lg mb-1">3. Menyimak Penjelasan Guru</h4>
-              <p class="text-gray-600 text-sm mb-3">Mendengarkan dengan sungguh-sungguh saat guru menjelaskan pelajaran di depan kelas.</p>
-              <button onclick="speakText('Contoh ketiga: Menyimak penjelasan guru dengan tertib saat pelajaran berlangsung.')" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 rounded-xl text-xs flex items-center justify-center gap-2">
-                <i class="fa-solid fa-volume-high"></i> Dengarkan
-              </button>
-            </div>
-          </div>
+                    <div class="bg-indigo-50 p-6 rounded-2xl border-2 border-indigo-200 space-y-4 shadow-sm">
+                        <h3 class="text-xl font-bold font-kids text-indigo-900 border-b pb-2">🎯 Tujuan Pembelajaran</h3>
+                        <p class="text-gray-800 leading-relaxed font-semibold">
+                            1. Mengidentifikasi aturan-aturan yang berlaku di rumah dan di sekolah secara tepat serta menerapkannya dalam kehidupan sehari-hari.
+                        </p>
+                    </div>
 
-          <!-- Contoh 4 -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKx2oiLAgsnV_0A1CXv6GR8pdM9Bn28N4ci3Q30Ev5slF5HGvQw29pVu13&s=10" 
-                 alt="Melaksanakan piket kelas" class="w-full h-48 object-cover"
-                 onerror="this.src='https://placehold.co/400x300/f59e0b/ffffff?text=Piket+Kelas'">
-            <div class="p-4">
-              <h4 class="font-bold text-amber-800 text-lg mb-1">4. Melaksanakan Piket Kelas</h4>
-              <p class="text-gray-600 text-sm mb-3">Gotong royong menyapu dan membersihkan ruang kelas sesuai jadwal piket harian.</p>
-              <button onclick="speakText('Contoh keempat: Melaksanakan piket kelas bersama teman agar kelas bersih.')" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 rounded-xl text-xs flex items-center justify-center gap-2">
-                <i class="fa-solid fa-volume-high"></i> Dengarkan
-              </button>
-            </div>
-          </div>
+                    <div class="bg-pink-50 p-6 rounded-2xl border-2 border-pink-200 space-y-3 shadow-sm md:col-span-2">
+                        <h3 class="text-xl font-bold font-kids text-pink-900 border-b pb-2">⭐ Nilai-Nilai Ketarakanitaan</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                            <div class="bg-white p-4 rounded-xl border border-pink-300 shadow-sm">
+                                <span class="text-2xl">💪</span>
+                                <h4 class="font-bold text-pink-800">Competence</h4>
+                                <p class="text-xs text-gray-600 mt-1">Cerdas, terampil, dan tangguh</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-pink-300 shadow-sm">
+                                <span class="text-2xl">❤️</span>
+                                <h4 class="font-bold text-pink-800">Compassion</h4>
+                                <p class="text-xs text-gray-600 mt-1">Belas kasih dan peduli sesama</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl border border-pink-300 shadow-sm">
+                                <span class="text-2xl">🤝</span>
+                                <h4 class="font-bold text-pink-800">Community</h4>
+                                <p class="text-xs text-gray-600 mt-1">Persaudaraan dan kebersamaan</p>
+                            </div>
+                        </div>
+                    </div>
 
-          <!-- Contoh 5 -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
-            <img src="https://i.ytimg.com/vi/bdwoAT5sLUc/maxresdefault.jpg" 
-                 alt="Bermain bersama rukun" class="w-full h-48 object-cover"
-                 onerror="this.src='https://placehold.co/400x300/f59e0b/ffffff?text=Bermain+Rukun'">
-            <div class="p-4">
-              <h4 class="font-bold text-amber-800 text-lg mb-1">5. Bermain Bersama dengan Rukun</h4>
-              <p class="text-gray-600 text-sm mb-3">Saat jam istirahat, bermain bersama teman tanpa bertengkar dan saling berbagi.</p>
-              <button onclick="speakText('Contoh kelima: Bermain bersama teman dengan rukun dan saling menyayangi.')" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 rounded-xl text-xs flex items-center justify-center gap-2">
-                <i class="fa-solid fa-volume-high"></i> Dengarkan
-              </button>
-            </div>
-          </div>
+                    <div class="bg-amber-50 p-6 rounded-2xl border-2 border-amber-200 shadow-sm md:col-span-2">
+                        <h3 class="text-xl font-bold font-kids text-amber-900 mb-2">🔍 Pembelajaran Terintegrasi (LINURIS)</h3>
+                        <div class="flex flex-wrap gap-4 font-bold text-amber-900">
+                            <span class="bg-amber-200 px-4 py-2 rounded-xl">📚 Literasi</span>
+                            <span class="bg-amber-200 px-4 py-2 rounded-xl">🔢 Numerasi</span>
+                            <span class="bg-amber-200 px-4 py-2 rounded-xl">🧪 Riset</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-          <!-- Contoh 6 -->
-          <div class="bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-between">
-            <img src="https://thumbs.dreamstime.com/b/students-hand-up-classroom-beautiful-teacher-woman-standing-teaching-front-children-raising-hands-sitting-flat-vector-81453973.jpg" 
-                 alt="Mengangkat tangan saat mau bertanya" class="w-full h-48 object-cover"
-                 onerror="this.src='https://placehold.co/400x300/f59e0b/ffffff?text=Mengangkat+Tangan'">
-            <div class="p-4">
-              <h4 class="font-bold text-amber-800 text-lg mb-1">6. Mengangkat Tangan Saat Ingin Bertanya</h4>
-              <p class="text-gray-600 text-sm mb-3">Mengangkat tangan kanan dan menunggu dipersilakan guru sebelum berbicara atau bertanya.</p>
-              <button onclick="speakText('Contoh keenam: Mengangkat tangan ketika ingin bertanya atau menjawab pertanyaan guru.')" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-2 rounded-xl text-xs flex items-center justify-center gap-2">
-                <i class="fa-solid fa-volume-high"></i> Dengarkan
-              </button>
-            </div>
-          </div>
+            <!-- SECTION 2: CONTOH ATURAN DI RUMAH -->
+            <section id="sec-aturan-rumah" class="hidden space-y-6">
+                <div class="border-b-4 border-emerald-500 pb-3 flex items-center justify-between">
+                    <h2 class="text-2xl md:text-3xl font-black font-kids text-emerald-800 flex items-center gap-3">
+                        <i class="fa-solid fa-house-user text-emerald-600"></i> Aturan di Rumah
+                    </h2>
+                </div>
 
-        </div>
+                <!-- Simple Definition Box -->
+                <div class="bg-emerald-100 p-5 rounded-2xl border-2 border-emerald-400 flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-emerald-900 font-kids">Apa itu Aturan? 🤔</h3>
+                        <p class="text-sm md:text-base text-emerald-800 mt-1">
+                            <strong>Aturan</strong> adalah petunjuk atau tata tertib yang dibuat agar hidup kita menjadi teratur, aman, disiplin, dan damai!
+                        </p>
+                    </div>
+                    <button onclick="readText('Aturan adalah petunjuk atau tata tertib yang dibuat agar hidup kita menjadi teratur, aman, disiplin, dan damai!')" class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap shadow-md">
+                        <i class="fa-solid fa-volume-high mr-1"></i> Dengar Suara
+                    </button>
+                </div>
 
-        <div class="mt-8 text-center">
-          <button onclick="showSection('beranda')" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-full">
-            <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
-          </button>
-        </div>
-      </div>
-    </section>
+                <!-- 6 Examples Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Example 1 -->
+                    <div class="bg-white rounded-2xl border-2 border-emerald-200 shadow-md overflow-hidden flex flex-col justify-between group hover:border-emerald-500 transition">
+                        <img src="https://cdn.medcom.id/dynamic/content/2018/10/09/938581/tsPB701GqV.jpg?w=700" alt="Tidur Tepat Waktu" class="h-48 w-full object-cover" onerror="this.src='https://placehold.co/600x400/10b981/ffffff?text=Tidur+Malam+Tepat+Waktu'">
+                        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+                            <div>
+                                <h4 class="font-bold text-lg font-kids text-emerald-900">1. Tidur Malam Tepat Waktu</h4>
+                                <p class="text-xs text-gray-600 mt-1">Tidur tidak terlalu malam agar tubuh sehat dan esok hari tidak terlambat bangun.</p>
+                            </div>
+                            <button onclick="readText('Tidur malam tepat waktu. Tidur tidak terlalu malam agar tubuh sehat dan esok hari tidak terlambat bangun.')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 py-2 rounded-xl text-xs font-bold border border-emerald-300">
+                                <i class="fa-solid fa-volume-high"></i> Suara
+                            </button>
+                        </div>
+                    </div>
 
-    <!-- ==================== SECTION 4: MANFAAT ATURAN ==================== -->
-    <section id="sec-manfaat-aturan" class="hidden space-y-6">
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border-4 border-purple-200">
-        <div class="flex justify-between items-center border-b pb-4 mb-4">
-          <h2 class="text-2xl sm:text-3xl font-bold text-purple-800 flex items-center gap-3">
-            <i class="fa-solid fa-heart text-purple-600"></i> Manfaat Adanya Aturan
-          </h2>
-          <button onclick="speakText('Manfaat aturan adalah membuat kehidupan menjadi tertib, nyaman, aman, dan melatih kita menjadi anak yang disiplin dan bertanggung jawab.')" class="bg-purple-100 hover:bg-purple-200 text-purple-800 p-2 rounded-full px-4 text-sm font-semibold flex items-center gap-2">
-            <i class="fa-solid fa-volume-high"></i> Suara Penjelasan
-          </button>
-        </div>
+                    <!-- Example 2 -->
+                    <div class="bg-white rounded-2xl border-2 border-emerald-200 shadow-md overflow-hidden flex flex-col justify-between group hover:border-emerald-500 transition">
+                        <img src="https://assets-a1.kompasiana.com/items/album/2024/12/22/screenshot-20241222-193649-67680c33ed641558a82e0ca3.jpg" alt="Merapikan Tempat Tidur" class="h-48 w-full object-cover" onerror="this.src='https://placehold.co/600x400/10b981/ffffff?text=Merapikan+Tempat+Tidur'">
+                        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+                            <div>
+                                <h4 class="font-bold text-lg font-kids text-emerald-900">2. Merapikan Tempat Tidur</h4>
+                                <p class="text-xs text-gray-600 mt-1">Setelah bangun, merapikan selimut dan bantal agar kamar selalu bersih dan rapi.</p>
+                            </div>
+                            <button onclick="readText('Setelah bangun tidur harus merapikan tempat tidur. Merapikan selimut dan bantal agar kamar bersih.')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 py-2 rounded-xl text-xs font-bold border border-emerald-300">
+                                <i class="fa-solid fa-volume-high"></i> Suara
+                            </button>
+                        </div>
+                    </div>
 
-        <div class="bg-purple-50 p-4 rounded-2xl mb-6 text-gray-700">
-          <p class="font-semibold text-purple-900">Mengapa aturan itu penting?</p>
-          <p>Dengan mematuhi aturan, kita melatih diri menjadi disiplin, jujur, dan bertanggung jawab. Kehidupan bersama di rumah maupun di sekolah menjadi harmonis, aman, dan damai.</p>
-        </div>
+                    <!-- Example 3 -->
+                    <div class="bg-white rounded-2xl border-2 border-emerald-200 shadow-md overflow-hidden flex flex-col justify-between group hover:border-emerald-500 transition">
+                        <img src="https://assets-a1.kompasiana.com/items/album/2023/10/04/cara-pendampingan-orang-tua-pada-anak-yang-malas-belajar-kibrispdr-651d1772ee794a2350045d14.jpg?t=o&v=770" alt="Belajar Bersama Orang Tua" class="h-48 w-full object-cover" onerror="this.src='https://placehold.co/600x400/10b981/ffffff?text=Belajar+Mandiri/Orang+Tua'">
+                        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+                            <div>
+                                <h4 class="font-bold text-lg font-kids text-emerald-900">3. Belajar Mandiri / Orang Tua</h4>
+                                <p class="text-xs text-gray-600 mt-1">Mengulang pelajaran dan mengerjakan tugas sekolah bersama orang tua dengan tekun.</p>
+                            </div>
+                            <button onclick="readText('Belajar bersama orang tua atau mandiri secara rutin setiap hari.')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 py-2 rounded-xl text-xs font-bold border border-emerald-300">
+                                <i class="fa-solid fa-volume-high"></i> Suara
+                            </button>
+                        </div>
+                    </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
-          <!-- Manfaat di Rumah -->
-          <div class="bg-emerald-50 border-2 border-emerald-200 p-5 rounded-2xl">
-            <h3 class="text-xl font-bold text-emerald-800 flex items-center gap-2 mb-3">
-              <i class="fa-solid fa-house"></i> 3 Manfaat Aturan di Rumah:
-            </h3>
-            <ul class="space-y-3 text-gray-700">
-              <li class="flex items-start gap-2 bg-white p-3 rounded-xl shadow-sm">
-                <span class="text-emerald-500 font-bold">1.</span>
-                <span>Rumah menjadi selalu bersih, rapi, dan nyaman untuk ditempati seluruh anggota keluarga.</span>
-              </li>
-              <li class="flex items-start gap-2 bg-white p-3 rounded-xl shadow-sm">
-                <span class="text-emerald-500 font-bold">2.</span>
-                <span>Menciptakan kerukunan, kasih sayang, dan rasa saling menghargai antaranggota keluarga.</span>
-              </li>
-              <li class="flex items-start gap-2 bg-white p-3 rounded-xl shadow-sm">
-                <span class="text-emerald-500 font-bold">3.</span>
-                <span>Melatih anak menjadi pribadi yang mandiri, jujur, dan disiplin sejak dini.</span>
-              </li>
-            </ul>
-          </div>
+                    <!-- Example 4 -->
+                    <div class="bg-white rounded-2xl border-2 border-emerald-200 shadow-md overflow-hidden flex flex-col justify-between group hover:border-emerald-500 transition">
+                        <img src="https://st.depositphotos.com/1007989/3205/i/450/depositphotos_32058349-stock-illustration-kid-boy-storing-toys.jpg" alt="Merapikan Mainan" class="h-48 w-full object-cover" onerror="this.src='https://placehold.co/600x400/10b981/ffffff?text=Merapikan+Mainan'">
+                        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+                            <div>
+                                <h4 class="font-bold text-lg font-kids text-emerald-900">4. Merapikan Mainan</h4>
+                                <p class="text-xs text-gray-600 mt-1">Setelah selesai bermain, mengembalikan mainan ke tempatnya agar tidak berserakan.</p>
+                            </div>
+                            <button onclick="readText('Setelah bermain harus merapikan mainannya kembali ke tempat semula.')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 py-2 rounded-xl text-xs font-bold border border-emerald-300">
+                                <i class="fa-solid fa-volume-high"></i> Suara
+                            </button>
+                        </div>
+                    </div>
 
-          <!-- Manfaat di Sekolah -->
-          <div class="bg-amber-50 border-2 border-amber-200 p-5 rounded-2xl">
-            <h3 class="text-xl font-bold text-amber-800 flex items-center gap-2 mb-3">
-              <i class="fa-solid fa-school"></i> 3 Manfaat Aturan di Sekolah:
-            </h3>
-            <ul class="space-y-3 text-gray-700">
-              <li class="flex items-start gap-2 bg-white p-3 rounded-xl shadow-sm">
-                <span class="text-amber-500 font-bold">1.</span>
-                <span>Suasana belajar di kelas menjadi tenang, fokus, dan menyenangkan.</span>
-              </li>
-              <li class="flex items-start gap-2 bg-white p-3 rounded-xl shadow-sm">
-                <span class="text-amber-500 font-bold">2.</span>
-                <span>Mencegah bahaya atau pertengkaran, sehingga semua siswa merasa aman bermain bersama.</span>
-              </li>
-              <li class="flex items-start gap-2 bg-white p-3 rounded-xl shadow-sm">
-                <span class="text-amber-500 font-bold">3.</span>
-                <span>Menjaga kebersihan lingkungan sekolah agar terhindar dari penyakit.</span>
-              </li>
-            </ul>
-          </div>
+                    <!-- Example 5 -->
+                    <div class="bg-white rounded-2xl border-2 border-emerald-200 shadow-md overflow-hidden flex flex-col justify-between group hover:border-emerald-500 transition">
+                        <img src="https://teman.marica.id/upload/media/entries/2024-03/01/104-entry-1-1709277742.jpg" alt="Berpamitan Orang Tua" class="h-48 w-full object-cover" onerror="this.src='https://placehold.co/600x400/10b981/ffffff?text=Berpamitan+Orang+Tua'">
+                        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+                            <div>
+                                <h4 class="font-bold text-lg font-kids text-emerald-900">5. Berpamitan Sebelum Pergi</h4>
+                                <p class="text-xs text-gray-600 mt-1">Mencium tangan dan mengucapkan salam kepada orang tua sebelum berangkat ke sekolah.</p>
+                            </div>
+                            <button onclick="readText('Berpamitan kepada orang tua sebelum pergi atau berangkat sekolah.')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 py-2 rounded-xl text-xs font-bold border border-emerald-300">
+                                <i class="fa-solid fa-volume-high"></i> Suara
+                            </button>
+                        </div>
+                    </div>
 
-        </div>
+                    <!-- Example 6 -->
+                    <div class="bg-white rounded-2xl border-2 border-emerald-200 shadow-md overflow-hidden flex flex-col justify-between group hover:border-emerald-500 transition">
+                        <img src="https://klinikgigiklaten.com/wp-content/uploads/2024/08/sblm-tdr.jpg" alt="Sikat Gigi Sebelum Tidur" class="h-48 w-full object-cover" onerror="this.src='https://placehold.co/600x400/10b981/ffffff?text=Sikat+Gigi+Tidur'">
+                        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+                            <div>
+                                <h4 class="font-bold text-lg font-kids text-emerald-900">6. Sikat Gigi Sebelum Tidur</h4>
+                                <p class="text-xs text-gray-600 mt-1">Membersihkan gigi sebelum tidur malam supaya gigi kuat dan tidak berlubang.</p>
+                            </div>
+                            <button onclick="readText('Menggosok atau sikat gigi sebelum tidur agar gigi bersih dan sehat.')" class="w-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 py-2 rounded-xl text-xs font-bold border border-emerald-300">
+                                <i class="fa-solid fa-volume-high"></i> Suara
+                            </button>
+                        </div>
+                    </div>
 
-        <div class="mt-8 text-center">
-          <button onclick="showSection('beranda')" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-full">
-            <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
-          </button>
-        </div>
-      </div>
-    </section>
+                </div>
+            </section>
 
-    <!-- ==================== SECTION 5: NILAI-NILAI TARAKANITA ==================== -->
-    <section id="sec-nilai-tarakanita" class="hidden space-y-6">
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border-4 border-rose-200">
-        <div class="flex justify-between items-center border-b pb-4 mb-4">
-          <h2 class="text-2xl sm:text-3xl font-bold text-rose-800 flex items-center gap-3">
-            <i class="fa-solid fa-star text-rose-600"></i> Nilai-Nilai Tarakanita
-          </h2>
-          <button onclick="speakText('Nilai Tarakanita meliputi Conviction, Competence, dan Community dalam penerapan Pancasila sehari-hari.')" class="bg-rose-100 hover:bg-rose-200 text-rose-800 p-2 rounded-full px-4 text-sm font-semibold flex items-center gap-2">
-            <i class="fa-solid fa-volume-high"></i> Suara Penjelasan
-          </button>
-        </div>
+            <!-- SECTION 3: CONTOH ATURAN DI SEKOLAH -->
+            <section id="sec-aturan-sekolah" class="hidden space-y-6">
+                <div class="border-b-4 border-amber-500 pb-3 flex items-center justify-between">
+                    <h2 class="text-2xl md:text-3xl font-black font-kids text-amber-800 flex items-center gap-3">
+                        <i class="fa-solid fa-school text-amber-600"></i> Aturan di Sekolah
+                    </h2>
+                </div>
 
-        <p class="text-gray-600 mb-6">
-          Penerapan sila-sila Pancasila terintegrasi erat dengan nilai-nilai Ketarakanitaan dalam kehidupan sehari-hari anak-anak Tarakanita:
-        </p>
+                <!-- Importance Explanation -->
+                <div class="bg-amber-100 p-5 rounded-2xl border-2 border-amber-400 flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div>
+                        <h3 class="text-lg font-bold text-amber-900 font-kids">Pentingnya Aturan di Sekolah 🏫</h3>
+                        <p class="text-sm md:text-base text-amber-800 mt-1">
+                            Aturan sekolah sangat penting agar suasana belajar menjadi tenang, aman, bersih, serta semua murid bisa belajar dengan gembira dan tertib!
+                        </p>
+                    </div>
+                    <button onclick="readText('Pentingnya aturan di sekolah agar suasana belajar tenang, aman, bersih, serta semua murid bisa belajar dengan gembira.')" class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-xl text-sm font-bold whitespace-nowrap shadow-md">
+                        <i class="fa-solid fa-volume-high mr-1"></i> Dengar Suara
+                    </button>
+                </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          <!-- Conviction -->
-          <div class="bg-red-50 border-2 border-red-200 rounded-2xl p-5 shadow-sm">
-            <div class="w-12 h-12 bg-red-600 text-white rounded-2xl flex items-center justify-center font-bold text-xl mb-3">Cc</div>
-            <h3 class="text-xl font-bold text-red-800 mb-2">Conviction (Daya Juang)</h3>
-            <p class="text-xs text-gray-600 mb-4">Keteguhan hati dan tekad pantang menyerah dalam berbuat kebaikan.</p>
-            <div class="space-y-2">
-              <div class="bg-white p-2.5 rounded-xl border border-red-100 text-xs text-gray-700">1. Pantang menyerah saat mengerjakan soal pelajaran.</div>
-              <div class="bg-white p-2.5 rounded-xl border border-red-100 text-xs text-gray-700">2. Jujur mengakui kesalahan dan tidak berbohong.</div>
-              <div class="bg-white p-2.5 rounded-xl border border-red-100 text-xs text-gray-700">3. Tekun berdoa dan beribadah tepat waktu.</div>
-            </div>
-          </div>
+                <!-- 6 Examples Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Example 1 -->
+                    <div class="bg-white rounded-2xl border-2 border-amber-200 shadow-md overflow-hidden flex flex-col justify-between group hover:border-amber-500 transition">
+                        <img src="https://assets-a1.kompasiana.com/items/album/2021/01/11/anak-pergi-ke-sekolah-5ffc7be48ede4828656a82b2.jpg" alt="Tiba Tepat Waktu" class="h-48 w-full object-cover" onerror="this.src='https://placehold.co/600x400/f59e0b/ffffff?text=Tiba+Tepat+Waktu'">
+                        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+                            <div>
+                                <h4 class="font-bold text-lg font-kids text-amber-900">1. Tiba Tepat Waktu</h4>
+                                <p class="text-xs text-gray-600 mt-1">Datang ke sekolah sebelum bel berbunyi agar tidak ketinggalan pelajaran.</p>
+                            </div>
+                            <button onclick="readText('Tiba di sekolah tepat waktu sebelum bel masuk berbunyi.')" class="w-full bg-amber-50 hover:bg-amber-100 text-amber-700 py-2 rounded-xl text-xs font-bold border border-amber-300">
+                                <i class="fa-solid fa-volume-high"></i> Suara
+                            </button>
+                        </div>
+                    </div>
 
-          <!-- Competence -->
-          <div class="bg-blue-50 border-2 border-blue-200 rounded-2xl p-5 shadow-sm">
-            <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center font-bold text-xl mb-3">Cp</div>
-            <h3 class="text-xl font-bold text-blue-800 mb-2">Competence (Kecakapan)</h3>
-            <p class="text-xs text-gray-600 mb-4">Semangat belajar untuk mengembangkan bakat dan kemampuan terpuji.</p>
-            <div class="space-y-2">
-              <div class="bg-white p-2.5 rounded-xl border border-blue-100 text-xs text-gray-700">1. Datang ke sekolah tepat waktu dan siap belajar.</div>
-              <div class="bg-white p-2.5 rounded-xl border border-blue-100 text-xs text-gray-700">2. Menyimak penjelasan guru dengan konsentrasi.</div>
-              <div class="bg-white p-2.5 rounded-xl border border-blue-100 text-xs text-gray-700">3. Rajin membaca buku di perpustakaan.</div>
-            </div>
-          </div>
+                    <!-- Example 2 -->
+                    <div class="bg-white rounded-2xl border-2 border-amber-200 shadow-md overflow-hidden flex flex-col justify-between group hover:border-amber-500 transition">
+                        <img src="https://assets-a1.kompasiana.com/items/album/2023/07/17/whatsapp-image-2023-07-13-at-12-58-31-64b4d97508a8b50dc92338d2.jpeg?t=o&v=770" alt="Seragam Rapi" class="h-48 w-full object-cover" onerror="this.src='https://placehold.co/600x400/f59e0b/ffffff?text=Seragam+Rapi'">
+                        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+                            <div>
+                                <h4 class="font-bold text-lg font-kids text-amber-900">2. Memakai Seragam Rapi</h4>
+                                <p class="text-xs text-gray-600 mt-1">Memakai pakaian seragam sekolah yang bersih, rapi, lengkap dengan atributnya.</p>
+                            </div>
+                            <button onclick="readText('Memakai seragam sekolah dengan rapi dan lengkap.')" class="w-full bg-amber-50 hover:bg-amber-100 text-amber-700 py-2 rounded-xl text-xs font-bold border border-amber-300">
+                                <i class="fa-solid fa-volume-high"></i> Suara
+                            </button>
+                        </div>
+                    </div>
 
-          <!-- Community -->
-          <div class="bg-emerald-50 border-2 border-emerald-200 rounded-2xl p-5 shadow-sm">
-            <div class="w-12 h-12 bg-emerald-600 text-white rounded-2xl flex items-center justify-center font-bold text-xl mb-3">Cm</div>
-            <h3 class="text-xl font-bold text-emerald-800 mb-2">Community (Persaudaraan)</h3>
-            <p class="text-xs text-gray-600 mb-4">Belajar hidup bersama dalam semangat kekeluargaan dan persahabatan.</p>
-            <div class="space-y-2">
-              <div class="bg-white p-2.5 rounded-xl border border-emerald-100 text-xs text-gray-700">1. Bermain bersama teman tanpa membeda-bedakan.</div>
-              <div class="bg-white p-2.5 rounded-xl border border-emerald-100 text-xs text-gray-700">2. Melaksanakan piket kelas secara gotong royong.</div>
-              <div class="bg-white p-2.5 rounded-xl border border-emerald-100 text-xs text-gray-700">3. Saling tolong-menolong saat ada teman terjatuh.</div>
-            </div>
-          </div>
+                    <!-- Example 3 -->
+                    <div class="bg-white rounded-2xl border-2 border-amber-200 shadow-md overflow-hidden flex flex-col justify-between group hover:border-amber-500 transition">
+                        <img src="https://st4.depositphotos.com/5425740/38466/v/1600/depositphotos_384667358-stock-illustration-classroom-pupils-teacher-lesson-classroom.jpg" alt="Menyimak Guru" class="h-48 w-full object-cover" onerror="this.src='https://placehold.co/600x400/f59e0b/ffffff?text=Menyimak+Penjelasan+Guru'">
+                        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+                            <div>
+                                <h4 class="font-bold text-lg font-kids text-amber-900">3. Menyimak Penjelasan Guru</h4>
+                                <p class="text-xs text-gray-600 mt-1">Mendengarkan dengan tertib dan fokus saat guru sedang menjelaskan pelajaran.</p>
+                            </div>
+                            <button onclick="readText('Menyimak penjelasan guru dengan tertib di dalam kelas.')" class="w-full bg-amber-50 hover:bg-amber-100 text-amber-700 py-2 rounded-xl text-xs font-bold border border-amber-300">
+                                <i class="fa-solid fa-volume-high"></i> Suara
+                            </button>
+                        </div>
+                    </div>
 
-        </div>
+                    <!-- Example 4 -->
+                    <div class="bg-white rounded-2xl border-2 border-amber-200 shadow-md overflow-hidden flex flex-col justify-between group hover:border-amber-500 transition">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKx2oiLAgsnV_0A1CXv6GR8pdM9Bn28N4ci3Q30Ev5slF5HGvQw29pVu13&s=10" alt="Piket Kelas" class="h-48 w-full object-cover" onerror="this.src='https://placehold.co/600x400/f59e0b/ffffff?text=Piket+Kelas'">
+                        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+                            <div>
+                                <h4 class="font-bold text-lg font-kids text-amber-900">4. Melaksanakan Piket Kelas</h4>
+                                <p class="text-xs text-gray-600 mt-1">Bekerja sama membersihkan ruang kelas sesuai dengan jadwal piket harian.</p>
+                            </div>
+                            <button onclick="readText('Melaksanakan piket kelas agar kelas bersih dan nyaman.')" class="w-full bg-amber-50 hover:bg-amber-100 text-amber-700 py-2 rounded-xl text-xs font-bold border border-amber-300">
+                                <i class="fa-solid fa-volume-high"></i> Suara
+                            </button>
+                        </div>
+                    </div>
 
-        <div class="mt-8 text-center">
-          <button onclick="showSection('beranda')" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-full">
-            <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
-          </button>
-        </div>
-      </div>
-    </section>
+                    <!-- Example 5 -->
+                    <div class="bg-white rounded-2xl border-2 border-amber-200 shadow-md overflow-hidden flex flex-col justify-between group hover:border-amber-500 transition">
+                        <img src="https://i.ytimg.com/vi/bdwoAT5sLUc/maxresdefault.jpg" alt="Bermain Rukun" class="h-48 w-full object-cover" onerror="this.src='https://placehold.co/600x400/f59e0b/ffffff?text=Bermain+Rukun'">
+                        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+                            <div>
+                                <h4 class="font-bold text-lg font-kids text-amber-900">5. Bermain Bersama Rukun</h4>
+                                <p class="text-xs text-gray-600 mt-1">Bermain bersama semua teman saat jam istirahat tanpa membeda-bedakan.</p>
+                            </div>
+                            <button onclick="readText('Bermain bersama teman dengan rukun dan saling berbagi.')" class="w-full bg-amber-50 hover:bg-amber-100 text-amber-700 py-2 rounded-xl text-xs font-bold border border-amber-300">
+                                <i class="fa-solid fa-volume-high"></i> Suara
+                            </button>
+                        </div>
+                    </div>
 
-    <!-- ==================== SECTION 6: VIDEO PEMBELAJARAN ==================== -->
-    <section id="sec-video-pembelajaran" class="hidden space-y-6">
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border-4 border-red-200">
-        <div class="border-b pb-4 mb-6">
-          <h2 class="text-2xl sm:text-3xl font-bold text-red-800 flex items-center gap-3">
-            <i class="fa-solid fa-circle-play text-red-600"></i> Video Pembelajaran Interaktif
-          </h2>
-          <p class="text-gray-600 text-sm">Saksikan video menarik berikut untuk semakin memahami aturan di rumah dan di sekolah!</p>
-        </div>
+                    <!-- Example 6 -->
+                    <div class="bg-white rounded-2xl border-2 border-amber-200 shadow-md overflow-hidden flex flex-col justify-between group hover:border-amber-500 transition">
+                        <img src="https://thumbs.dreamstime.com/b/students-hand-up-classroom-beautiful-teacher-woman-standing-teaching-front-children-raising-hands-sitting-flat-vector-81453973.jpg" alt="Angkat Tangan Bertanya" class="h-48 w-full object-cover" onerror="this.src='https://placehold.co/600x400/f59e0b/ffffff?text=Mengangkat+Tangan'">
+                        <div class="p-4 flex-1 flex flex-col justify-between space-y-3">
+                            <div>
+                                <h4 class="font-bold text-lg font-kids text-amber-900">6. Mengangkat Tangan Saat Bertanya</h4>
+                                <p class="text-xs text-gray-600 mt-1">Mengangkat tangan kanan terlebih dahulu jika ingin berbicara atau bertanya kepada guru.</p>
+                            </div>
+                            <button onclick="readText('Mengangkat tangan ketika ingin bertanya atau menyampaikan pendapat.')" class="w-full bg-amber-50 hover:bg-amber-100 text-amber-700 py-2 rounded-xl text-xs font-bold border border-amber-300">
+                                <i class="fa-solid fa-volume-high"></i> Suara
+                            </button>
+                        </div>
+                    </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <!-- Video 1 -->
-          <div class="bg-gray-50 border rounded-2xl p-4 shadow-sm">
-            <h3 class="font-bold text-red-700 text-lg mb-3 flex items-center gap-2">
-              <i class="fa-solid fa-video"></i> 1. Pentingnya Aturan di Rumah
-            </h3>
-            <div class="relative w-full overflow-hidden rounded-xl shadow" style="padding-top: 56.25%;">
-              <iframe class="absolute top-0 left-0 w-full h-full" 
-                      src="https://www.youtube.com/embed/v_gESljX3eQ" 
-                      title="Aturan di Rumah" 
-                      frameborder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                      allowfullscreen></iframe>
-            </div>
-          </div>
+                </div>
+            </section>
 
-          <!-- Video 2 -->
-          <div class="bg-gray-50 border rounded-2xl p-4 shadow-sm">
-            <h3 class="font-bold text-red-700 text-lg mb-3 flex items-center gap-2">
-              <i class="fa-solid fa-video"></i> 2. Pentingnya Aturan di Sekolah
-            </h3>
-            <div class="relative w-full overflow-hidden rounded-xl shadow" style="padding-top: 56.25%;">
-              <iframe class="absolute top-0 left-0 w-full h-full" 
-                      src="https://www.youtube.com/embed/1krwRNgmhqU" 
-                      title="Aturan di Sekolah" 
-                      frameborder="0" 
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                      allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
+            <!-- SECTION 4: MANFAAT ATURAN -->
+            <section id="sec-manfaat" class="hidden space-y-6">
+                <div class="border-b-4 border-fuchsia-500 pb-3 flex items-center justify-between">
+                    <h2 class="text-2xl md:text-3xl font-black font-kids text-fuchsia-800 flex items-center gap-3">
+                        <i class="fa-solid fa-heart-circle-check text-fuchsia-600"></i> Manfaat Aturan
+                    </h2>
+                    <button onclick="readText('Pentingnya adanya aturan membuat hidup menjadi teratur, aman, disiplin, dan menciptakan kerukunan.')" class="bg-fuchsia-100 hover:bg-fuchsia-200 text-fuchsia-700 px-3 py-1 rounded-xl text-sm font-bold">
+                        <i class="fa-solid fa-volume-high"></i> Baca Semua
+                    </button>
+                </div>
 
-        <div class="mt-8 text-center">
-          <button onclick="showSection('beranda')" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-full">
-            <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
-          </button>
-        </div>
-      </div>
-    </section>
+                <div class="bg-fuchsia-50 p-5 rounded-2xl border-2 border-fuchsia-300 text-fuchsia-900">
+                    <h3 class="text-xl font-bold font-kids">💡 Mengapa Aturan Itu Sangat Penting?</h3>
+                    <p class="mt-2 leading-relaxed">
+                        Jika tidak ada aturan, kehidupan akan menjadi kacau dan tidak aman. Mengikuti aturan melatih kita menjadi anak yang disiplin, jujur, dan disayangi oleh orang tua, guru, serta teman-teman!
+                    </p>
+                </div>
 
-    <!-- ==================== SECTION 7: LATIHAN SOAL LINURIS ==================== -->
-    <section id="sec-latihan-linuris" class="hidden space-y-6">
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border-4 border-cyan-200">
-        <div class="border-b pb-4 mb-6">
-          <h2 class="text-2xl sm:text-3xl font-bold text-cyan-800 flex items-center gap-3">
-            <i class="fa-solid fa-brain text-cyan-600"></i> Latihan Soal Linuris (Literasi, Numerasi & Riset)
-          </h2>
-        </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Manfaat di Rumah -->
+                    <div class="bg-emerald-50 p-6 rounded-2xl border-2 border-emerald-300 shadow-sm space-y-4">
+                        <div class="flex items-center justify-between border-b border-emerald-200 pb-2">
+                            <h3 class="text-xl font-bold font-kids text-emerald-900">🏡 3 Manfaat Aturan di Rumah</h3>
+                            <button onclick="readText('Manfaat aturan di rumah: 1. Rumah menjadi bersih dan rapi. 2. Hubungan keluarga harmonis dan rukun. 3. Melatih mandiri dan disiplin.')" class="text-xs bg-emerald-200 text-emerald-800 px-2 py-1 rounded-lg">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </button>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 bg-white p-3 rounded-xl border border-emerald-200">
+                                <span class="bg-emerald-500 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm shrink-0">1</span>
+                                <div>
+                                    <strong class="text-emerald-900 block">Rumah Bersih & Rapi</strong>
+                                    <span class="text-xs text-gray-600">Suasana rumah menjadi nyaman dan menyenangkan untuk ditempati.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3 bg-white p-3 rounded-xl border border-emerald-200">
+                                <span class="bg-emerald-500 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm shrink-0">2</span>
+                                <div>
+                                    <strong class="text-emerald-900 block">Keluarga Rukun & Harmonis</strong>
+                                    <span class="text-xs text-gray-600">Terhindar dari pertengkaran dengan saudara atau teguran orang tua.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3 bg-white p-3 rounded-xl border border-emerald-200">
+                                <span class="bg-emerald-500 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm shrink-0">3</span>
+                                <div>
+                                    <strong class="text-emerald-900 block">Melatih Kemandirian</strong>
+                                    <span class="text-xs text-gray-600">Anak belajar bertanggung jawab atas keperluan pribadinya.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
-        <!-- A. SOAL LITERASI -->
-        <div class="space-y-6 mb-8">
-          <div class="bg-cyan-50 border-l-8 border-cyan-500 p-4 rounded-r-2xl">
-            <h3 class="text-xl font-bold text-cyan-900">bagian A: Soal Literasi Aturan Sekolah & Rumah</h3>
-          </div>
+                    <!-- Manfaat di Sekolah -->
+                    <div class="bg-amber-50 p-6 rounded-2xl border-2 border-amber-300 shadow-sm space-y-4">
+                        <div class="flex items-center justify-between border-b border-amber-200 pb-2">
+                            <h3 class="text-xl font-bold font-kids text-amber-900">🏫 3 Manfaat Aturan di Sekolah</h3>
+                            <button onclick="readText('Manfaat aturan di sekolah: 1. Suasana belajar tenang dan fokus. 2. Memiliki banyak teman karena rukun. 3. Melatih kedisiplinan dan tepat waktu.')" class="text-xs bg-amber-200 text-amber-800 px-2 py-1 rounded-lg">
+                                <i class="fa-solid fa-volume-high"></i>
+                            </button>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3 bg-white p-3 rounded-xl border border-amber-200">
+                                <span class="bg-amber-500 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm shrink-0">1</span>
+                                <div>
+                                    <strong class="text-amber-900 block">Kelas Tenang & Nyaman</strong>
+                                    <span class="text-xs text-gray-600">Semua siswa dapat fokus belajar dan memahami penjelasan guru.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3 bg-white p-3 rounded-xl border border-amber-200">
+                                <span class="bg-amber-500 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm shrink-0">2</span>
+                                <div>
+                                    <strong class="text-amber-900 block">Banyak Teman & Rukun</strong>
+                                    <span class="text-xs text-gray-600">Saling menghargai dan tidak berebut mainan di sekolah.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3 bg-white p-3 rounded-xl border border-amber-200">
+                                <span class="bg-amber-500 text-white w-7 h-7 rounded-full flex items-center justify-center font-bold text-sm shrink-0">3</span>
+                                <div>
+                                    <strong class="text-amber-900 block">Melatih Kedisiplinan Tinggi</strong>
+                                    <span class="text-xs text-gray-600">Membiasakan diri tepat waktu dan patuh pada guru.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
-          <!-- Literasi 1 -->
-          <div class="bg-gray-50 border rounded-2xl p-5 shadow-sm space-y-3">
-            <div class="flex flex-col md:flex-row gap-4 items-center">
-              <img src="https://assets-a1.kompasiana.com/items/album/2021/01/11/anak-pergi-ke-sekolah-5ffc7be48ede4828656a82b2.jpg" class="w-full md:w-48 h-32 object-cover rounded-xl" alt="Literasi 1" onerror="this.src='https://placehold.co/300x200/0891b2/ffffff?text=Stimulus+1'">
-              <div class="text-sm text-gray-700">
-                <p class="bg-white p-3 rounded-xl border text-xs leading-relaxed font-medium">
-                  <strong>Cerita:</strong> Budi anak yang rajin. Setiap pagi jam 6, Budi sudah siap berangkat ke sekolah. Budi berjalan kaki dengan gembira bersama teman-temannya. Budi tidak pernah terlambat sampai di sekolah.
-                </p>
-                <p class="font-bold text-cyan-900 mt-2">1. Sikap Budi menunjukkan contoh menaati aturan di sekolah, yaitu...</p>
-              </div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button onclick="checkAnswer(this, true)" class="bg-white hover:bg-cyan-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">A. Tiba di sekolah tepat waktu</button>
-              <button onclick="checkAnswer(this, false)" class="bg-white hover:bg-cyan-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">B. Membuang sampah sembarangan</button>
-              <button onclick="checkAnswer(this, false)" class="bg-white hover:bg-cyan-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">C. Bermain saat jam pelajaran</button>
-            </div>
-          </div>
+                </div>
+            </section>
 
-          <!-- Literasi 2 -->
-          <div class="bg-gray-50 border rounded-2xl p-5 shadow-sm space-y-3">
-            <div class="flex flex-col md:flex-row gap-4 items-center">
-              <img src="https://st.depositphotos.com/1007989/3205/i/450/depositphotos_32058349-stock-illustration-kid-boy-storing-toys.jpg" class="w-full md:w-48 h-32 object-cover rounded-xl" alt="Literasi 2" onerror="this.src='https://placehold.co/300x200/0891b2/ffffff?text=Stimulus+2'">
-              <div class="text-sm text-gray-700">
-                <p class="bg-white p-3 rounded-xl border text-xs leading-relaxed font-medium">
-                  <strong>Cerita:</strong> Dani selesai bermain balok kayu di kamar. Kamar Dani terlihat penuh dengan mainan berserakan. Ibu mengingatkan Dani untuk bertanggung jawab. Dani segera memasukkan mainan ke tempatnya.
-                </p>
-                <p class="font-bold text-cyan-900 mt-2">2. Apa aturan di rumah yang dilaksanakan oleh Dani?</p>
-              </div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button onclick="checkAnswer(this, false)" class="bg-white hover:bg-cyan-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">A. Membiarkan mainan di lantai</button>
-              <button onclick="checkAnswer(this, true)" class="bg-white hover:bg-cyan-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">B. Merapikan mainan setelah bermain</button>
-              <button onclick="checkAnswer(this, false)" class="bg-white hover:bg-cyan-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">C. Tidur tanpa membereskan kamar</button>
-            </div>
-          </div>
+            <!-- SECTION 5: NILAI-NILAI TARAKANITA -->
+            <section id="sec-tarakanita" class="hidden space-y-6">
+                <div class="border-b-4 border-red-500 pb-3 flex items-center justify-between">
+                    <h2 class="text-2xl md:text-3xl font-black font-kids text-red-800 flex items-center gap-3">
+                        <i class="fa-solid fa-star text-red-600"></i> Nilai-Nilai Tarakanita & Pancasila
+                    </h2>
+                </div>
 
-          <!-- Literasi 3 -->
-          <div class="bg-gray-50 border rounded-2xl p-5 shadow-sm space-y-3">
-            <div class="flex flex-col md:flex-row gap-4 items-center">
-              <img src="https://thumbs.dreamstime.com/b/students-hand-up-classroom-beautiful-teacher-woman-standing-teaching-front-children-raising-hands-sitting-flat-vector-81453973.jpg" class="w-full md:w-48 h-32 object-cover rounded-xl" alt="Literasi 3" onerror="this.src='https://placehold.co/300x200/0891b2/ffffff?text=Stimulus+3'">
-              <div class="text-sm text-gray-700">
-                <p class="bg-white p-3 rounded-xl border text-xs leading-relaxed font-medium">
-                  <strong>Cerita:</strong> Ibu Guru sedang menerangkan pelajaran Pancasila. Ani ingin bertanya sesuatu yang belum ia pahami. Ani tidak langsung berteriak di dalam kelas. Ani mengacungkan tangan kanannya terlebih dahulu.
-                </p>
-                <p class="font-bold text-cyan-900 mt-2">3. Sikap tertib Ani saat ingin bertanya di kelas adalah...</p>
-              </div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button onclick="checkAnswer(this, true)" class="bg-white hover:bg-cyan-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">A. Mengangkat tangan sebelum berbicara</button>
-              <button onclick="checkAnswer(this, false)" class="bg-white hover:bg-cyan-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">B. Berlari menghampiri papan tulis</button>
-              <button onclick="checkAnswer(this, false)" class="bg-white hover:bg-cyan-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">C. Mengobrol dengan teman sebelah</button>
-            </div>
-          </div>
-        </div>
+                <div class="bg-red-50 p-5 rounded-2xl border-2 border-red-300 text-red-900">
+                    <p class="font-medium">
+                        Penerapan Pancasila dalam kehidupan sehari-hari sejalan dengan nilai-nilai Ketarakanitaan: <strong>Conviction, Competence,</strong> dan <strong>Community</strong>.
+                    </p>
+                </div>
 
-        <!-- B. SOAL NUMERASI -->
-        <div class="space-y-6 mb-8">
-          <div class="bg-amber-50 border-l-8 border-amber-500 p-4 rounded-r-2xl">
-            <h3 class="text-xl font-bold text-amber-900">bagian B: Soal Numerasi Penjumlahan & Pengurangan (Sampai 20)</h3>
-          </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <!-- Conviction -->
+                    <div class="bg-white p-5 rounded-2xl border-2 border-amber-300 shadow-md space-y-3">
+                        <div class="text-center">
+                            <span class="text-4xl">🙏</span>
+                            <h3 class="text-xl font-bold font-kids text-amber-800 mt-1">Conviction</h3>
+                            <p class="text-xs text-amber-700 font-semibold">Keberanian & Daya Juang Iman</p>
+                        </div>
+                        <hr class="border-amber-200">
+                        <p class="text-xs font-bold text-gray-700">Contoh Penerapan:</p>
+                        <ul class="text-xs space-y-2 text-gray-600 list-disc pl-4">
+                            <li>Berdoa sebelum dan sesudah belajar.</li>
+                            <li>Jujur dan berani mengakui kesalahan jika melanggar aturan.</li>
+                            <li>Tekun dan tidak mudah menyerah saat belajar.</li>
+                        </ul>
+                    </div>
 
-          <!-- Numerasi 1 -->
-          <div class="bg-gray-50 border rounded-2xl p-5 shadow-sm space-y-3">
-            <p class="text-xs bg-white p-3 rounded-xl border font-medium text-gray-700">
-              <strong>Stimulus:</strong> Hari ini di kelas 1 SD Tarakanita terdapat 12 anak berpakaian seragam sangat rapi, dan terdapat 4 anak yang bajunya belum rapi.
-            </p>
-            <p class="font-bold text-amber-900 text-sm">1. Berapa jumlah seluruh anak di kelas tersebut? (12 + 4 = ...)</p>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button onclick="checkAnswer(this, false)" class="bg-white hover:bg-amber-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">A. 14 anak</button>
-              <button onclick="checkAnswer(this, false)" class="bg-white hover:bg-amber-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">B. 15 anak</button>
-              <button onclick="checkAnswer(this, true)" class="bg-white hover:bg-amber-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">C. 16 anak</button>
-            </div>
-          </div>
+                    <!-- Competence -->
+                    <div class="bg-white p-5 rounded-2xl border-2 border-blue-300 shadow-md space-y-3">
+                        <div class="text-center">
+                            <span class="text-4xl">💡</span>
+                            <h3 class="text-xl font-bold font-kids text-blue-800 mt-1">Competence</h3>
+                            <p class="text-xs text-blue-700 font-semibold">Kecerdasan & Keterampilan</p>
+                        </div>
+                        <hr class="border-blue-200">
+                        <p class="text-xs font-bold text-gray-700">Contoh Penerapan:</p>
+                        <ul class="text-xs space-y-2 text-gray-600 list-disc pl-4">
+                            <li>Mengerjakan tugas rumah dan sekolah dengan bersungguh-sungguh.</li>
+                            <li>Datang ke sekolah tepat waktu dengan disiplin tinggi.</li>
+                            <li>Selalu merapikan peralatan belajar sendiri.</li>
+                        </ul>
+                    </div>
 
-          <!-- Numerasi 2 -->
-          <div class="bg-gray-50 border rounded-2xl p-5 shadow-sm space-y-3">
-            <p class="text-xs bg-white p-3 rounded-xl border font-medium text-gray-700">
-              <strong>Stimulus:</strong> Ada 10 anak yang piket membersihkan kelas di pagi hari. Kemudian datang lagi 5 anak ikut bergabung menyapu kelas dengan gembira.
-            </p>
-            <p class="font-bold text-amber-900 text-sm">2. Berapakah total siswa yang ikut piket bersama? (10 + 5 = ...)</p>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button onclick="checkAnswer(this, true)" class="bg-white hover:bg-amber-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">A. 15 anak</button>
-              <button onclick="checkAnswer(this, false)" class="bg-white hover:bg-amber-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">B. 13 anak</button>
-              <button onclick="checkAnswer(this, false)" class="bg-white hover:bg-amber-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">C. 18 anak</button>
-            </div>
-          </div>
+                    <!-- Community -->
+                    <div class="bg-white p-5 rounded-2xl border-2 border-emerald-300 shadow-md space-y-3">
+                        <div class="text-center">
+                            <span class="text-4xl">🤝</span>
+                            <h3 class="text-xl font-bold font-kids text-emerald-800 mt-1">Community</h3>
+                            <p class="text-xs text-emerald-700 font-semibold">Semangat Persaudaraan</p>
+                        </div>
+                        <hr class="border-emerald-200">
+                        <p class="text-xs font-bold text-gray-700">Contoh Penerapan:</p>
+                        <ul class="text-xs space-y-2 text-gray-600 list-disc pl-4">
+                            <li>Melaksanakan tugas piket kelas bersama-sama.</li>
+                            <li>Bermain dengan semua teman tanpa membeda-bedakan.</li>
+                            <li>Saling membantu teman yang kesulitan di sekolah.</li>
+                        </ul>
+                    </div>
 
-          <!-- Numerasi 3 -->
-          <div class="bg-gray-50 border rounded-2xl p-5 shadow-sm space-y-3">
-            <p class="text-xs bg-white p-3 rounded-xl border font-medium text-gray-700">
-              <strong>Stimulus:</strong> Di meja perpustakaan terdapat 18 buku aturan. Sebanyak 6 buku dipinjam anak-anak untuk dibaca di kelas.
-            </p>
-            <p class="font-bold text-amber-900 text-sm">3. Berapa sisa buku aturan yang masih ada di meja perpustakaan? (18 - 6 = ...)</p>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-              <button onclick="checkAnswer(this, false)" class="bg-white hover:bg-amber-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">A. 10 buku</button>
-              <button onclick="checkAnswer(this, true)" class="bg-white hover:bg-amber-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">B. 12 buku</button>
-              <button onclick="checkAnswer(this, false)" class="bg-white hover:bg-amber-100 border-2 border-gray-200 p-2.5 rounded-xl text-xs font-semibold text-left">C. 14 buku</button>
-            </div>
-          </div>
-        </div>
+                </div>
+            </section>
 
-        <!-- C. PEMBELAJARAN RISET -->
-        <div class="space-y-4">
-          <div class="bg-purple-50 border-l-8 border-purple-500 p-4 rounded-r-2xl">
-            <h3 class="text-xl font-bold text-purple-900">bagian C: Kegiatan Riset Sederhana</h3>
-          </div>
+            <!-- SECTION 6: VIDEO PEMBELAJARAN -->
+            <section id="sec-video" class="hidden space-y-6">
+                <div class="border-b-4 border-red-500 pb-3">
+                    <h2 class="text-2xl md:text-3xl font-black font-kids text-red-800 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-play text-red-600"></i> Video Pembelajaran
+                    </h2>
+                </div>
 
-          <div class="bg-purple-100 p-4 rounded-2xl border border-purple-200 text-purple-900 font-semibold text-sm">
-            <i class="fa-solid fa-clipboard-list mr-2"></i> Instruksi Riset Siswa:
-            <p class="font-normal text-xs text-purple-800 mt-1">
-              "Lakukanlah wawancara kepada teman-temanmu untuk mengetahui aturan mana yang sudah dilakukan hari ini!"
-            </p>
-          </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Video 1: Aturan di Rumah -->
+                    <div class="bg-white p-4 rounded-2xl border-2 border-red-200 shadow-md space-y-3">
+                        <h3 class="font-bold text-lg font-kids text-red-800 flex items-center gap-2">
+                            <i class="fa-solid fa-house"></i> Pentingnya Aturan di Rumah
+                        </h3>
+                        <div class="aspect-video w-full rounded-xl overflow-hidden shadow-inner bg-black">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/v_gESljX3eQ" title="Aturan di Rumah" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
 
-          <div class="overflow-x-auto">
-            <table class="w-full text-sm text-left border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
-              <thead class="bg-purple-700 text-white">
-                <tr>
-                  <th class="p-3 border text-center w-16">Nomor</th>
-                  <th class="p-3 border">Nama Siswa</th>
-                  <th class="p-3 border">Aturan Yang Sudah Dilakukan Hari Ini</th>
-                  <th class="p-3 border text-center">Ceklis (✓)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="border-b">
-                  <td class="p-2 border text-center font-bold">1</td>
-                  <td class="p-2 border"><input type="text" placeholder="Tulis nama teman..." class="w-full p-1.5 border rounded"></td>
-                  <td class="p-2 border"><input type="text" placeholder="Contoh: Datang tepat waktu / Piket" class="w-full p-1.5 border rounded"></td>
-                  <td class="p-2 border text-center"><input type="checkbox" class="w-5 h-5 accent-purple-600"></td>
-                </tr>
-                <tr class="border-b">
-                  <td class="p-2 border text-center font-bold">2</td>
-                  <td class="p-2 border"><input type="text" placeholder="Tulis nama teman..." class="w-full p-1.5 border rounded"></td>
-                  <td class="p-2 border"><input type="text" placeholder="Contoh: Memakai seragam rapi" class="w-full p-1.5 border rounded"></td>
-                  <td class="p-2 border text-center"><input type="checkbox" class="w-5 h-5 accent-purple-600"></td>
-                </tr>
-                <tr class="border-b">
-                  <td class="p-2 border text-center font-bold">3</td>
-                  <td class="p-2 border"><input type="text" placeholder="Tulis nama teman..." class="w-full p-1.5 border rounded"></td>
-                  <td class="p-2 border"><input type="text" placeholder="Contoh: Menyimak guru" class="w-full p-1.5 border rounded"></td>
-                  <td class="p-2 border text-center"><input type="checkbox" class="w-5 h-5 accent-purple-600"></td>
-                </tr>
-                <tr class="border-b">
-                  <td class="p-2 border text-center font-bold">4</td>
-                  <td class="p-2 border"><input type="text" placeholder="Tulis nama teman..." class="w-full p-1.5 border rounded"></td>
-                  <td class="p-2 border"><input type="text" placeholder="Contoh: Berpamitan orang tua" class="w-full p-1.5 border rounded"></td>
-                  <td class="p-2 border text-center"><input type="checkbox" class="w-5 h-5 accent-purple-600"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+                    <!-- Video 2: Aturan di Sekolah -->
+                    <div class="bg-white p-4 rounded-2xl border-2 border-red-200 shadow-md space-y-3">
+                        <h3 class="font-bold text-lg font-kids text-red-800 flex items-center gap-2">
+                            <i class="fa-solid fa-school"></i> Pentingnya Aturan di Sekolah
+                        </h3>
+                        <div class="aspect-video w-full rounded-xl overflow-hidden shadow-inner bg-black">
+                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/1krwRNgmhqU" title="Aturan di Sekolah" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-          <div class="bg-amber-100 border-2 border-amber-300 p-4 rounded-2xl text-amber-900 font-medium text-xs sm:text-sm flex items-center gap-3">
-            <i class="fa-solid fa-calculator text-2xl text-amber-600"></i>
-            <div>
-              <strong>Tugas Lanjutan Riset:</strong>
-              <p>Setelah selesai wawancara, hitunglah berapa anak yang sudah menerapkan aturan di sekolah!</p>
-            </div>
-          </div>
-        </div>
+            <!-- SECTION 7: LATIHAN SOAL LINURIS -->
+            <section id="sec-linuris" class="hidden space-y-8">
+                <div class="border-b-4 border-sky-500 pb-3">
+                    <h2 class="text-2xl md:text-3xl font-black font-kids text-sky-800 flex items-center gap-3">
+                        <i class="fa-solid fa-pen-ruler text-sky-600"></i> Latihan Soal Linuris (Literasi, Numerasi, & Riset)
+                    </h2>
+                </div>
 
-        <div class="mt-8 text-center">
-          <button onclick="showSection('beranda')" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-full">
-            <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
-          </button>
-        </div>
-      </div>
-    </section>
+                <!-- LITERASI SECTION -->
+                <div class="bg-sky-50 p-6 rounded-2xl border-2 border-sky-300 space-y-6">
+                    <h3 class="text-xl font-bold font-kids text-sky-900 border-b border-sky-200 pb-2">
+                        📚 bagian A: Soal Literasi (Aturan Sekolah & Rumah)
+                    </h3>
 
-    <!-- ==================== SECTION 8: PERMAINAN ATURAN DI SEKOLAH ==================== -->
-    <section id="sec-game-sekolah" class="hidden space-y-6">
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border-4 border-fuchsia-200">
-        <div class="border-b pb-4 mb-4 flex justify-between items-center">
-          <h2 class="text-2xl sm:text-3xl font-bold text-fuchsia-800 flex items-center gap-3">
-            <i class="fa-solid fa-gamepad text-fuchsia-600"></i> Permainan Aturan di Sekolah
-          </h2>
-          <span class="bg-fuchsia-100 text-fuchsia-800 text-xs font-bold px-3 py-1 rounded-full">Wordwall Game</span>
-        </div>
+                    <!-- Literasi Soal 1 -->
+                    <div class="bg-white p-4 rounded-xl border shadow-sm space-y-3">
+                        <div class="flex flex-col md:flex-row gap-4 items-center">
+                            <img src="https://assets-a1.kompasiana.com/items/album/2021/01/11/anak-pergi-ke-sekolah-5ffc7be48ede4828656a82b2.jpg" class="w-full md:w-44 h-32 object-cover rounded-lg border" alt="Stimulus 1">
+                            <div class="text-xs md:text-sm text-gray-700 leading-relaxed">
+                                <p class="font-semibold text-sky-800">Bacaan Stimulus 1:</p>
+                                Every morning, Budi wakes up early at 5 AM. He prepares his bag and wears his neat school uniform. Budi arrives at school before the bell rings. Budi is never late for class.
+                            </div>
+                        </div>
+                        <p class="font-bold text-sm text-gray-800">1. Aturan sekolah apa yang dipatuhi oleh Budi dalam cerita di atas?</p>
+                        <div id="lit-q1-opts" class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <button onclick="checkLinuris('lit1', 'A', false, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold text-left">A. Memakai sepatu bebas</button>
+                            <button onclick="checkLinuris('lit1', 'B', true, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold text-left">B. Tiba di sekolah tepat waktu</button>
+                            <button onclick="checkLinuris('lit1', 'C', false, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold text-left">C. Bermain sampai siang</button>
+                        </div>
+                    </div>
 
-        <div class="w-full flex justify-center overflow-hidden rounded-2xl shadow-lg border">
-          <iframe style="max-width:100%" 
-                  src="https://wordwall.net/embed/ad59b3c9b4a64f29be3a5ea5c5393dc2?themeId=23&templateId=49&fontStackId=0" 
-                  width="1280" 
-                  height="720" 
-                  frameborder="0" 
-                  allowfullscreen></iframe>
-        </div>
+                    <!-- Literasi Soal 2 -->
+                    <div class="bg-white p-4 rounded-xl border shadow-sm space-y-3">
+                        <div class="flex flex-col md:flex-row gap-4 items-center">
+                            <img src="https://st4.depositphotos.com/5425740/38466/v/1600/depositphotos_384667358-stock-illustration-classroom-pupils-teacher-lesson-classroom.jpg" class="w-full md:w-44 h-32 object-cover rounded-lg border" alt="Stimulus 2">
+                            <div class="text-xs md:text-sm text-gray-700 leading-relaxed">
+                                <p class="font-semibold text-sky-800">Bacaan Stimulus 2:</p>
+                                Ibu Guru Maya sedang menjelaskan materi Pancasila di depan kelas. Siti dan teman-temannya duduk dengan tenang di bangkunya. Mereka mendengarkan penjelasan guru dengan seksama. Tidak ada anak yang mengobrol sendiri.
+                            </div>
+                        </div>
+                        <p class="font-bold text-sm text-gray-800">2. Sikap Siti yang menunjukkan kepatuhan aturan kelas adalah...</p>
+                        <div id="lit-q2-opts" class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <button onclick="checkLinuris('lit2', 'A', true, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold text-left">A. Menyimak penjelasan guru</button>
+                            <button onclick="checkLinuris('lit2', 'B', false, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold text-left">B. Mengobrol dengan teman</button>
+                            <button onclick="checkLinuris('lit2', 'C', false, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold text-left">C. Tidur di atas meja</button>
+                        </div>
+                    </div>
 
-        <div class="mt-8 text-center">
-          <button onclick="showSection('beranda')" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-full">
-            <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
-          </button>
-        </div>
-      </div>
-    </section>
+                    <!-- Literasi Soal 3 -->
+                    <div class="bg-white p-4 rounded-xl border shadow-sm space-y-3">
+                        <div class="flex flex-col md:flex-row gap-4 items-center">
+                            <img src="https://st.depositphotos.com/1007989/3205/i/450/depositphotos_32058349-stock-illustration-kid-boy-storing-toys.jpg" class="w-full md:w-44 h-32 object-cover rounded-lg border" alt="Stimulus 3">
+                            <div class="text-xs md:text-sm text-gray-700 leading-relaxed">
+                                <p class="font-semibold text-sky-800">Bacaan Stimulus 3:</p>
+                                Edo bermain mobil-mobilan di ruang tamu sampai sore. Setelah selesai bermain, Edo langsung mengambil kotak mainan. Edo menyimpan kembali semua mobil-mobilannya ke dalam kotak. Ruang tamu pun kembali bersih.
+                            </div>
+                        </div>
+                        <p class="font-bold text-sm text-gray-800">3. Apa manfaat dari aturan yang dilakukan Edo di rumah?</p>
+                        <div id="lit-q3-opts" class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <button onclick="checkLinuris('lit3', 'A', false, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold text-left">A. Mainan cepat rusak</button>
+                            <button onclick="checkLinuris('lit3', 'B', true, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold text-left">B. Rumah menjadi rapi dan aman</button>
+                            <button onclick="checkLinuris('lit3', 'C', false, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold text-left">C. Ibu menjadi marah</button>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- ==================== SECTION 9: PERMAINAN ATURAN DI RUMAH (FISHING GAME) ==================== -->
-    <section id="sec-game-rumah" class="hidden space-y-6">
-      <div class="bg-white rounded-3xl p-4 sm:p-6 shadow-xl border-4 border-sky-300">
-        
-        <div class="border-b pb-3 mb-4 flex justify-between items-center flex-wrap gap-2">
-          <h2 class="text-2xl sm:text-3xl font-bold text-sky-800 flex items-center gap-3">
-            <i class="fa-solid fa-fish text-sky-500"></i> Permainan Memancing Aturan di Rumah
-          </h2>
-          <div id="game-controls" class="flex gap-2">
-            <button onclick="initFishingGame(1)" class="bg-sky-500 hover:bg-sky-600 text-white font-bold px-4 py-2 rounded-xl text-xs shadow">1 Player</button>
-            <button onclick="initFishingGame(2)" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-4 py-2 rounded-xl text-xs shadow">2 Player (Split Screen)</button>
-          </div>
-        </div>
+                <!-- NUMERASI SECTION -->
+                <div class="bg-cyan-50 p-6 rounded-2xl border-2 border-cyan-300 space-y-6">
+                    <h3 class="text-xl font-bold font-kids text-cyan-900 border-b border-cyan-200 pb-2">
+                        🔢 Bagian B: Soal Numerasi (Penjumlahan sampai 20)
+                    </h3>
 
-        <!-- Name Input Screen -->
-        <div id="game-setup" class="bg-sky-50 p-6 rounded-2xl text-center max-w-md mx-auto space-y-4">
-          <h3 class="text-xl font-bold text-sky-900">Masukkan Nama Pemain</h3>
-          <div id="player1-input">
-            <label class="block text-xs font-bold text-gray-700 text-left mb-1">Nama Pemain 1:</label>
-            <input type="text" id="p1-name" value="Pemain 1" class="w-full p-2 border rounded-xl font-bold text-center">
-          </div>
-          <div id="player2-input" class="hidden">
-            <label class="block text-xs font-bold text-gray-700 text-left mb-1">Nama Pemain 2:</label>
-            <input type="text" id="p2-name" value="Pemain 2" class="w-full p-2 border rounded-xl font-bold text-center">
-          </div>
-          <button onclick="startFishingGame()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl shadow-lg text-lg">
-            🚀 Mulai Memancing!
-          </button>
-        </div>
+                    <!-- Numerasi Soal 1 -->
+                    <div class="bg-white p-4 rounded-xl border shadow-sm space-y-2">
+                        <p class="text-xs text-cyan-800 font-semibold">Stimulus: Hari ini terdapat 12 anak berpakaian rapi, dan terdapat 4 anak yang bajunya tidak rapi.</p>
+                        <p class="font-bold text-sm text-gray-800">1. Berapakah jumlah total seluruh anak pada cerita di atas? (12 + 4 = ...)</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <button onclick="checkLinuris('num1', 'A', false, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold">A. 14 anak</button>
+                            <button onclick="checkLinuris('num1', 'B', false, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold">B. 15 anak</button>
+                            <button onclick="checkLinuris('num1', 'C', true, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold">C. 16 anak</button>
+                        </div>
+                    </div>
 
-        <!-- Game Area Canvas Container -->
-        <div id="game-canvas-container" class="hidden space-y-4">
-          
-          <div id="game-status-bar" class="flex justify-between items-center bg-sky-100 p-3 rounded-xl font-bold text-sm text-sky-900">
-            <div id="p1-score-display">Pemain 1: <span id="p1-score" class="text-red-600 text-lg">0</span> Poin</div>
-            <div id="game-sound-toggle" onclick="toggleGameBgm()" class="cursor-pointer bg-white px-3 py-1 rounded-full text-xs shadow">
-              🎵 BGM: <span id="bgm-state">ON</span>
-            </div>
-            <div id="p2-score-display" class="hidden">Pemain 2: <span id="p2-score" class="text-blue-600 text-lg">0</span> Poin</div>
-          </div>
+                    <!-- Numerasi Soal 2 -->
+                    <div class="bg-white p-4 rounded-xl border shadow-sm space-y-2">
+                        <p class="text-xs text-cyan-800 font-semibold">Stimulus: Di kelas 1 SD ada 10 anak yang melaksanakan piket pagi, dan 8 anak melaksanakan piket siang.</p>
+                        <p class="font-bold text-sm text-gray-800">2. Berapa jumlah seluruh anak yang rajin bertugas piket? (10 + 8 = ...)</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <button onclick="checkLinuris('num2', 'A', true, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold">A. 18 anak</button>
+                            <button onclick="checkLinuris('num2', 'B', false, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold">B. 17 anak</button>
+                            <button onclick="checkLinuris('num2', 'C', false, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold">C. 19 anak</button>
+                        </div>
+                    </div>
 
-          <!-- Split Screen Canvas Layout -->
-          <div id="canvas-wrapper" class="grid grid-cols-1 gap-4">
+                    <!-- Numerasi Soal 3 -->
+                    <div class="bg-white p-4 rounded-xl border shadow-sm space-y-2">
+                        <p class="text-xs text-cyan-800 font-semibold">Stimulus: Rani mengumpulkan 9 buku tugas yang rapi, dan Made mengumpulkan 7 buku tugas yang rapi.</p>
+                        <p class="font-bold text-sm text-gray-800">3. Berapa total buku tugas rapi yang terkumpul? (9 + 7 = ...)</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <button onclick="checkLinuris('num3', 'A', false, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold">A. 15 buku</button>
+                            <button onclick="checkLinuris('num3', 'B', true, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold">B. 16 buku</button>
+                            <button onclick="checkLinuris('num3', 'C', false, this)" class="p-2 border rounded-xl hover:bg-gray-50 text-xs font-semibold">C. 17 buku</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RISET SECTION -->
+                <div class="bg-amber-50 p-6 rounded-2xl border-2 border-amber-300 space-y-4">
+                    <h3 class="text-xl font-bold font-kids text-amber-900 border-b border-amber-200 pb-2">
+                        🧪 Bagian C: Pembelajaran Riset Sederhana
+                    </h3>
+
+                    <div class="bg-amber-100 p-4 rounded-xl border border-amber-300 text-amber-900 font-semibold text-sm">
+                        📢 <strong>Instruksi Siswa:</strong> Lakukanlah wawancara kepada teman-temanmu untuk mengetahui aturan mana yang sudah dilakukan hari ini! Isilah tabel di bawah ini.
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full bg-white rounded-xl border-2 border-amber-200 overflow-hidden text-sm">
+                            <thead class="bg-amber-500 text-white font-kids">
+                                <tr>
+                                    <th class="p-3 border">Nomor</th>
+                                    <th class="p-3 border">Nama Siswa</th>
+                                    <th class="p-3 border">Aturan yang Sudah Dilaksanakan Hari Ini</th>
+                                    <th class="p-3 border">Sudah Menerapkan?</th>
+                                </tr>
+                            </thead>
+                            <tbody id="riset-tbody">
+                                <tr>
+                                    <td class="p-2 border text-center">1</td>
+                                    <td class="p-2 border"><input type="text" placeholder="Nama teman 1" class="w-full p-1 border rounded"></td>
+                                    <td class="p-2 border"><input type="text" placeholder="Contoh: Memakai seragam rapi" class="w-full p-1 border rounded"></td>
+                                    <td class="p-2 border text-center"><input type="checkbox" class="riset-chk h-5 w-5 accent-amber-600"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 border text-center">2</td>
+                                    <td class="p-2 border"><input type="text" placeholder="Nama teman 2" class="w-full p-1 border rounded"></td>
+                                    <td class="p-2 border"><input type="text" placeholder="Contoh: Datang tepat waktu" class="w-full p-1 border rounded"></td>
+                                    <td class="p-2 border text-center"><input type="checkbox" class="riset-chk h-5 w-5 accent-amber-600"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 border text-center">3</td>
+                                    <td class="p-2 border"><input type="text" placeholder="Nama teman 3" class="w-full p-1 border rounded"></td>
+                                    <td class="p-2 border"><input type="text" placeholder="Contoh: Menyimak guru" class="w-full p-1 border rounded"></td>
+                                    <td class="p-2 border text-center"><input type="checkbox" class="riset-chk h-5 w-5 accent-amber-600"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 border text-center">4</td>
+                                    <td class="p-2 border"><input type="text" placeholder="Nama teman 4" class="w-full p-1 border rounded"></td>
+                                    <td class="p-2 border"><input type="text" placeholder="Contoh: Piket kelas" class="w-full p-1 border rounded"></td>
+                                    <td class="p-2 border text-center"><input type="checkbox" class="riset-chk h-5 w-5 accent-amber-600"></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-2 border text-center">5</td>
+                                    <td class="p-2 border"><input type="text" placeholder="Nama teman 5" class="w-full p-1 border rounded"></td>
+                                    <td class="p-2 border"><input type="text" placeholder="Contoh: Angkat tangan saat bertanya" class="w-full p-1 border rounded"></td>
+                                    <td class="p-2 border text-center"><input type="checkbox" class="riset-chk h-5 w-5 accent-amber-600"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-white p-4 rounded-xl border border-amber-300 space-y-3">
+                        <p class="text-xs text-gray-700 font-bold">
+                            📝 Setelah selesai wawancara, hitunglah berapa anak yang sudah menerapkan aturan di sekolah!
+                        </p>
+                        <button onclick="calculateRiset()" class="bg-amber-600 hover:bg-amber-700 text-white font-bold px-4 py-2 rounded-xl text-sm shadow">
+                            Hitung Hasil Wawancara 📊
+                        </button>
+                        <div id="riset-result" class="hidden text-base font-extrabold text-amber-900 bg-amber-100 p-3 rounded-lg"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 8: PERMAINAN ATURAN DI SEKOLAH -->
+            <section id="sec-game-sekolah" class="hidden space-y-4">
+                <div class="border-b-4 border-teal-500 pb-3">
+                    <h2 class="text-2xl md:text-3xl font-black font-kids text-teal-800 flex items-center gap-3">
+                        <i class="fa-solid fa-gamepad text-teal-600"></i> Permainan Aturan di Sekolah
+                    </h2>
+                </div>
+                <p class="text-sm text-gray-600 font-semibold">Mainkan permainan interaktif Wordwall di bawah ini!</p>
+                <div class="w-full rounded-2xl overflow-hidden shadow-xl border-4 border-teal-400 bg-black flex justify-center">
+                    <iframe style="max-width:100%" src="https://wordwall.net/embed/ad59b3c9b4a64f29be3a5ea5c5393dc2?themeId=23&templateId=49&fontStackId=0" width="1280" height="720" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- SECTION 9: PERMAINAN ATURAN DI RUMAH (FISHING GAME) -->
+            <section id="sec-game-mancing" class="hidden space-y-6">
+                <div class="border-b-4 border-yellow-500 pb-3 flex justify-between items-center">
+                    <h2 class="text-2xl md:text-3xl font-black font-kids text-yellow-800 flex items-center gap-3">
+                        <i class="fa-solid fa-fish text-yellow-600"></i> Game Memancing Aturan di Rumah
+                    </h2>
+                </div>
+
+                <!-- Game Setup Screen -->
+                <div id="fishing-setup" class="bg-gradient-to-br from-blue-100 to-cyan-200 p-6 rounded-3xl border-4 border-blue-400 shadow-xl space-y-6 text-center">
+                    <h3 class="text-2xl font-black font-kids text-blue-900">🎣 Petualangan Memancing Ikan Aturan!</h3>
+                    <p class="text-sm text-blue-800 font-semibold max-w-xl mx-auto">
+                        Ayo pancing ikan di laut! Setiap ikan yang tertangkap menyimpan pertanyaan seputar aturan di rumah. Kumpulkan poin sebanyak-banyaknya!
+                    </p>
+
+                    <div class="max-w-md mx-auto space-y-4 bg-white p-6 rounded-2xl border-2 border-blue-300 shadow">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1 text-left">Pilih Mode Permainan:</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button id="mode-btn-1p" onclick="setFishingMode(1)" class="p-3 rounded-xl border-2 border-blue-500 bg-blue-500 text-white font-bold text-sm">
+                                    👤 1 Player
+                                </button>
+                                <button id="mode-btn-2p" onclick="setFishingMode(2)" class="p-3 rounded-xl border-2 border-blue-300 bg-white text-blue-700 font-bold text-sm">
+                                    👥 2 Players
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 text-left">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 mb-1">Nama Pemain 1:</label>
+                                <input type="text" id="p1-name-input" value="Pemain 1" class="w-full p-2 border rounded-xl font-bold text-sm focus:ring-2 focus:ring-blue-400">
+                            </div>
+                            <div id="p2-name-container" class="hidden">
+                                <label class="block text-xs font-bold text-gray-700 mb-1">Nama Pemain 2:</label>
+                                <input type="text" id="p2-name-input" value="Pemain 2" class="w-full p-2 border rounded-xl font-bold text-sm focus:ring-2 focus:ring-blue-400">
+                            </div>
+                        </div>
+
+                        <button onclick="startFishingGame()" class="w-full bg-yellow-400 hover:bg-yellow-300 text-yellow-950 font-black py-3 rounded-xl shadow-lg font-kids text-lg border-b-4 border-yellow-600 transition pulse-btn">
+                            🚀 Mulai Memancing!
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Active Game View Canvas Container -->
+                <div id="fishing-game-area" class="hidden space-y-4">
+                    
+                    <div class="flex justify-between items-center bg-blue-900 text-white p-3 rounded-2xl font-bold text-sm md:text-base">
+                        <div id="p1-score-display" class="bg-blue-800 px-4 py-1 rounded-xl border border-blue-400">
+                            P1: 0 Poin
+                        </div>
+                        <div class="text-yellow-300 font-kids">
+                            🎯 Klik Hewan Laut Untuk Memancing
+                        </div>
+                        <div id="p2-score-display" class="hidden bg-pink-800 px-4 py-1 rounded-xl border border-pink-400">
+                            P2: 0 Poin
+                        </div>
+                    </div>
+
+                    <!-- Canvas Container -->
+                    <div id="canvas-container" class="w-full bg-cyan-900 rounded-3xl overflow-hidden border-4 border-blue-500 shadow-2xl relative min-h-[450px]">
+                        <canvas id="fishingCanvas" class="w-full h-full block cursor-crosshair"></canvas>
+                        
+                        <!-- Question Modal Overlay (1P / 2P Player Popups) -->
+                        <div id="game-quiz-modal" class="hidden absolute inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 z-20">
+                            <div id="quiz-card" class="bg-white rounded-3xl border-4 border-yellow-400 p-6 max-w-lg w-full shadow-2xl space-y-4 text-center animate-bounce-slow">
+                                <span id="quiz-player-badge" class="bg-yellow-400 text-yellow-950 font-black px-4 py-1 rounded-full text-xs font-kids"></span>
+                                <span id="quiz-bonus-badge" class="hidden bg-pink-500 text-white font-black px-3 py-1 rounded-full text-xs font-kids ml-2">🌟 BONUS +5 POIN!</span>
+                                <h4 id="quiz-question-text" class="text-base md:text-lg font-bold text-gray-800 mt-2"></h4>
+                                <div id="quiz-options" class="grid grid-cols-1 gap-2 text-left"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scoreboard End Modal -->
+                <div id="fishing-scoreboard" class="hidden bg-white p-6 rounded-3xl border-4 border-yellow-400 shadow-2xl text-center space-y-6">
+                    <h3 class="text-3xl font-black font-kids text-yellow-800">🏆 Hasil Papan Skor Akhir 🏆</h3>
+                    <div id="score-details" class="space-y-4 max-w-md mx-auto"></div>
+                    <button onclick="resetFishingGame()" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-6 py-3 rounded-2xl shadow-lg">
+                        🔄 Main Lagi
+                    </button>
+                </div>
+            </section>
+
+            <!-- SECTION 10: TES FORMATIF -->
+            <section id="sec-formatif" class="hidden space-y-4">
+                <div class="border-b-4 border-violet-500 pb-3">
+                    <h2 class="text-2xl md:text-3xl font-black font-kids text-violet-800 flex items-center gap-3">
+                        <i class="fa-solid fa-clipboard-check text-violet-600"></i> Tes Formatif
+                    </h2>
+                </div>
+                <p class="text-sm text-gray-600 font-semibold">Kerjakan tes formatif berikut untuk menguji pemahamanmu!</p>
+                <div class="w-full rounded-2xl overflow-hidden shadow-xl border-4 border-violet-400 bg-black flex justify-center">
+                    <iframe style="max-width:100%" src="https://wordwall.net/embed/869ae74615bb46c9988a2cdd391765e4?themeId=1&templateId=11&fontStackId=0" width="1280" height="720" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- SECTION 11: REFLEKSI -->
+            <section id="sec-refleksi" class="hidden space-y-6">
+                <div class="border-b-4 border-pink-500 pb-3">
+                    <h2 class="text-2xl md:text-3xl font-black font-kids text-pink-800 flex items-center gap-3">
+                        <i class="fa-solid fa-face-smile text-pink-600"></i> Refleksi Pembelajaran
+                    </h2>
+                </div>
+
+                <div class="bg-pink-50 p-6 rounded-3xl border-2 border-pink-300 space-y-6">
+                    
+                    <!-- Question 1: Emoji Selection -->
+                    <div class="space-y-3 text-center">
+                        <h3 class="text-lg md:text-xl font-bold font-kids text-pink-900">
+                            Bagaimana kegiatan belajarmu hari ini? 😊/😢
+                        </h3>
+                        <div class="flex justify-center gap-6">
+                            <button id="ref-emo-happy" onclick="selectEmoji('senang')" class="bg-white p-4 rounded-2xl border-4 border-transparent hover:border-pink-400 shadow-md text-5xl transition transform hover:scale-110">
+                                😊
+                                <span class="block text-xs font-bold text-gray-600 mt-1">Senang</span>
+                            </button>
+                            <button id="ref-emo-sad" onclick="selectEmoji('sedih')" class="bg-white p-4 rounded-2xl border-4 border-transparent hover:border-pink-400 shadow-md text-5xl transition transform hover:scale-110">
+                                😢
+                                <span class="block text-xs font-bold text-gray-600 mt-1">Sedih</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Question 2: Story Text Area -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold text-pink-900">
+                            Ceritakan bagaimana kegiatan belajarmu hari ini, bagaimana materinya apakah sulit atau tidak!
+                        </label>
+                        <input type="text" id="ref-name" placeholder="Nama Lengkap Siswa" class="w-full p-3 rounded-xl border-2 border-pink-200 font-semibold text-sm mb-2">
+                        <textarea id="ref-text" rows="4" placeholder="Tulis cerita refleksimu di sini..." class="w-full p-4 rounded-2xl border-2 border-pink-200 focus:ring-2 focus:ring-pink-400 text-sm font-semibold"></textarea>
+                        <button onclick="saveRefleksi()" class="w-full bg-pink-500 hover:bg-pink-600 text-white font-black py-3 rounded-2xl shadow-lg font-kids text-base transition">
+                            💾 Simpan Refleksi
+                        </button>
+                    </div>
+
+                    <!-- Results Output Box -->
+                    <div class="space-y-3">
+                        <h4 class="font-bold font-kids text-pink-900 text-lg border-b border-pink-200 pb-1">
+                            💬 Hasil Refleksi Para Pengguna:
+                        </h4>
+                        <div id="refleksi-list" class="space-y-3 max-h-60 overflow-y-auto pr-1">
+                            <!-- Reflection Cards appended dynamically -->
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-100 border-t p-4 text-center text-xs font-bold text-gray-600">
+            © 2026 SD Tarakanita 3 - Media Pembelajaran Pendidikan Pancasila Kelas 1 SD
+        </footer>
+
+    </div>
+
+    <script>
+        // ==========================================
+        // 1. SECTION NAVIGATION LOGIC
+        // ==========================================
+        function showSection(sectionId) {
+            const sections = ['home', 'identitas', 'aturan-rumah', 'aturan-sekolah', 'manfaat', 'tarakanita', 'video', 'linuris', 'game-sekolah', 'game-mancing', 'formatif', 'refleksi'];
+            sections.forEach(id => {
+                const el = document.getElementById('sec-' + id);
+                if (el) el.classList.add('hidden');
+            });
+
+            const activeEl = document.getElementById('sec-' + sectionId);
+            if (activeEl) activeEl.classList.remove('hidden');
+
+            const homeBtn = document.getElementById('btn-home-nav');
+            if (sectionId === 'home') {
+                homeBtn.classList.add('hidden');
+            } else {
+                homeBtn.classList.remove('hidden');
+            }
+
+            // Stop speech synth when changing sections
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+            }
+
+            // Resize game canvas if fishing section shown
+            if (sectionId === 'game-mancing' && isGameRunning) {
+                resizeCanvas();
+            }
+        }
+
+        // Mascot Talk Function
+        function mascotTalk(name, text) {
+            const box = document.getElementById('mascot-speech');
+            const txt = document.getElementById('mascot-speech-text');
+            box.classList.remove('hidden');
+            txt.innerText = `${name}: "${text}"`;
+            readText(`${name} berkata: ${text}`);
+        }
+
+        // Web Text-to-Speech Engine
+        function readText(text) {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'id-ID';
+                utterance.rate = 0.9;
+                window.speechSynthesis.speak(utterance);
+            }
+        }
+
+        // ==========================================
+        // 2. LINURIS CHECKER & RESEARCH CALCULATOR
+        // ==========================================
+        function checkLinuris(qid, opt, isCorrect, btnEl) {
+            const parent = btnEl.parentElement;
+            const buttons = parent.querySelectorAll('button');
+            buttons.forEach(b => {
+                b.classList.remove('bg-green-500', 'bg-red-500', 'text-white');
+                b.classList.add('bg-white');
+            });
+
+            if (isCorrect) {
+                btnEl.classList.add('bg-green-500', 'text-white');
+                playAudioTone(600, 'sine', 0.15);
+            } else {
+                btnEl.classList.add('bg-red-500', 'text-white');
+                playAudioTone(200, 'sawtooth', 0.2);
+            }
+        }
+
+        function calculateRiset() {
+            const checkboxes = document.querySelectorAll('.riset-chk');
+            let count = 0;
+            checkboxes.forEach(chk => { if (chk.checked) count++; });
             
-            <!-- Player 1 Screen -->
-            <div class="relative bg-gradient-to-b from-sky-200 via-sky-400 to-blue-700 rounded-2xl overflow-hidden shadow-inner h-[380px] border-4 border-sky-400" id="p1-screen">
-              <div class="absolute top-2 left-2 z-10 bg-white/80 px-3 py-1 rounded-full text-xs font-bold" id="p1-tag">Pemain 1</div>
-              <canvas id="canvasP1" class="w-full h-full cursor-crosshair"></canvas>
-            </div>
+            const resBox = document.getElementById('riset-result');
+            resBox.classList.remove('hidden');
+            resBox.innerText = `📊 Hasil: Ada ${count} orang anak yang sudah menerapkan aturan di sekolah hari ini! Bagus sekali! 🎉`;
+        }
 
-            <!-- Player 2 Screen (for 2P Mode) -->
-            <div class="relative bg-gradient-to-b from-teal-200 via-teal-400 to-blue-800 rounded-2xl overflow-hidden shadow-inner h-[380px] border-4 border-teal-400 hidden" id="p2-screen">
-              <div class="absolute top-2 left-2 z-10 bg-white/80 px-3 py-1 rounded-full text-xs font-bold" id="p2-tag">Pemain 2</div>
-              <canvas id="canvasP2" class="w-full h-full cursor-crosshair"></canvas>
-            </div>
+        // ==========================================
+        // 3. REFLEKSI SYSTEM
+        // ==========================================
+        let selectedEmojiVal = 'senang';
 
-          </div>
-        </div>
+        function selectEmoji(val) {
+            selectedEmojiVal = val;
+            const happyBtn = document.getElementById('ref-emo-happy');
+            const sadBtn = document.getElementById('ref-emo-sad');
 
-        <!-- Question Modal Popup for Fish Catch -->
-        <div id="fish-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-          <div class="bg-white rounded-3xl p-6 max-w-lg w-full shadow-2xl border-4 border-yellow-400 space-y-4">
-            <div class="flex justify-between items-center border-b pb-2">
-              <span class="bg-yellow-100 text-yellow-800 font-bold px-3 py-1 rounded-full text-xs" id="question-bonus-tag">Soal Memancing</span>
-              <span class="font-bold text-gray-500 text-xs" id="question-turn-player">Giliran: Pemain 1</span>
-            </div>
+            if (val === 'senang') {
+                happyBtn.classList.add('border-pink-500', 'bg-pink-100');
+                sadBtn.classList.remove('border-pink-500', 'bg-pink-100');
+            } else {
+                sadBtn.classList.add('border-pink-500', 'bg-pink-100');
+                happyBtn.classList.remove('border-pink-500', 'bg-pink-100');
+            }
+        }
+
+        function saveRefleksi() {
+            const name = document.getElementById('ref-name').value.trim() || 'Siswa SD Tarakanita 3';
+            const text = document.getElementById('ref-text').value.trim();
+
+            if (!text) {
+                alert('Silakan tulis cerita pengalaman belajarmu terlebih dahulu!');
+                return;
+            }
+
+            const item = {
+                name: name,
+                emoji: selectedEmojiVal === 'senang' ? '😊 Senang' : '😢 Sedih',
+                text: text,
+                time: new Date().toLocaleTimeString([], { hour: '2-2digit', minute: '2-2digit' })
+            };
+
+            // Save to LocalStorage list
+            let list = JSON.parse(localStorage.getItem('tara3_refleksi') || '[]');
+            list.unshift(item);
+            localStorage.setItem('tara3_refleksi', JSON.stringify(list));
+
+            document.getElementById('ref-text').value = '';
+            renderRefleksi();
+        }
+
+        function renderRefleksi() {
+            const container = document.getElementById('refleksi-list');
+            let list = JSON.parse(localStorage.getItem('tara3_refleksi') || '[]');
+
+            // Pre-seed mock reflection if empty
+            if (list.length === 0) {
+                list = [
+                    { name: 'Aurelia (Kelas 1A)', emoji: '😊 Senang', text: 'Hari ini seru banget belajar aturan sambil main game pancing ikan!', time: '08:30' },
+                    { name: 'Kenzie (Kelas 1B)', emoji: '😊 Senang', text: 'Materinya tidak sulit, saya sudah paham aturan di rumah.', time: '09:15' }
+                ];
+            }
+
+            container.innerHTML = list.map(item => `
+                <div class="bg-white p-3 rounded-xl border border-pink-200 shadow-sm text-xs md:text-sm space-y-1">
+                    <div class="flex justify-between items-center font-bold text-pink-900">
+                        <span>${item.name} (${item.emoji})</span>
+                        <span class="text-xs text-gray-400 font-normal">${item.time}</span>
+                    </div>
+                    <p class="text-gray-700">${item.text}</p>
+                </div>
+            `).join('');
+        }
+
+        // ==========================================
+        // 4. FISHING GAME ENGINE (HTML5 CANVAS)
+        // ==========================================
+        let gameMode = 1; // 1 Player or 2 Players
+        let canvas, ctx;
+        let isGameRunning = false;
+        let p1Score = 0, p2Score = 0;
+        let activePlayerTurn = 1; // 1 or 2
+        let seaAnimals = [];
+        let hookP1 = { x: 100, y: 100, targetX: 100, targetY: 100, active: false };
+        let hookP2 = { x: 500, y: 100, targetX: 500, targetY: 100, active: false };
+        let currentFishTarget = null;
+
+        // 10 Standard Questions + 5 Bonus Questions (15 Total per player)
+        const ruleQuestions = [
+            { q: "Apa yang harus kamu lakukan setelah bangun tidur?", opts: ["Merapikan tempat tidur", "Langsung main HP", "Membiarkan selimut acak-acakan"], ans: 0 },
+            { q: "Sebelum pergi sekolah, kita sebaiknya...", opts: ["Pergi begitu saja", "Berpamitan pada orang tua", "Sembunyi di kamar"], ans: 1 },
+            { q: "Merapikan mainan setelah selesai bermain bermanfaat agar...", opts: ["Mainan tidak hilang & rumah rapi", "Mainan cepat rusak", "Ibu marah"], ans: 0 },
+            { q: "Aturan tidur malam tepat waktu bertujuan supaya...", opts: ["Tubuh sehat & tidak terlambat", "Bisa menonton TV malam", "Mengantuk di kelas"], ans: 0 },
+            { q: "Sikat gigi sebelum tidur malam dilakukan agar...", opts: ["Gigi tidak berlubang", "Mulut bau", "Gigi cepat tanggal"], ans: 0 },
+            { q: "Belajar bersama orang tua di rumah merupakan contoh...", opts: ["Aturan di rumah", "Aturan di jalan raya", "Aturan di pasar"], ans: 0 },
+            { q: "Siapa yang harus mematuhi aturan di rumah?", opts: ["Seluruh anggota keluarga", "Hanya adik", "Tetangga sebelah"], ans: 0 },
+            { q: "Bila kita melanggar aturan di rumah, maka suasana menjadi...", opts: ["Teratur & bahagia", "Tidak nyaman & kacau", "Sangat seru"], ans: 1 },
+            { q: "Aturan di rumah dibuat untuk kebaikan...", opts: ["Semua keluarga", "Orang lain", "Musuh"], ans: 0 },
+            { q: "Membuang sampah di tempat sampah rumah adalah aturan agar...", opts: ["Rumah bersih & sehat", "Rumah kotor", "Banyak lalat"], ans: 0 },
+            // Bonus Questions
+            { q: "⭐ BONUS: Menyapu lantai bersama ibu menunjukkan nilai...", opts: ["Kebersamaan & Kebersihan", "Malas-malasan", "Marah"], ans: 0, bonus: true },
+            { q: "⭐ BONUS: Mengucapkan salam saat masuk rumah adalah contoh...", opts: ["Sopan santun", "Kebiasaan buruk", "Larangan"], ans: 0, bonus: true },
+            { q: "⭐ BONUS: Menaruh sepatu di rak sepatu setelah pulang sekolah...", opts: ["Membuat rumah rapi", "Membuat sepatu hilang", "Dilarang ibu"], ans: 0, bonus: true },
+            { q: "⭐ BONUS: Menonton TV terlalu dekat & sampai larut malam...", opts: ["Melanggar aturan rumah", "Mematuhi aturan", "Sangat bagus"], ans: 0, bonus: true },
+            { q: "⭐ BONUS: Mengapa kita harus patuh pada orang tua di rumah?", opts: ["Karena orang tua sayang kita", "Supaya dihukum", "Tidak ada alasan"], ans: 0, bonus: true }
+        ];
+
+        function setFishingMode(mode) {
+            gameMode = mode;
+            const btn1 = document.getElementById('mode-btn-1p');
+            const btn2 = document.getElementById('mode-btn-2p');
+            const p2Container = document.getElementById('p2-name-container');
+
+            if (mode === 1) {
+                btn1.className = "p-3 rounded-xl border-2 border-blue-500 bg-blue-500 text-white font-bold text-sm";
+                btn2.className = "p-3 rounded-xl border-2 border-blue-300 bg-white text-blue-700 font-bold text-sm";
+                p2Container.classList.add('hidden');
+            } else {
+                btn2.className = "p-3 rounded-xl border-2 border-pink-500 bg-pink-500 text-white font-bold text-sm";
+                btn1.className = "p-3 rounded-xl border-2 border-blue-300 bg-white text-blue-700 font-bold text-sm";
+                p2Container.classList.remove('hidden');
+            }
+        }
+
+        function startFishingGame() {
+            document.getElementById('fishing-setup').classList.add('hidden');
+            document.getElementById('fishing-game-area').classList.remove('hidden');
+            document.getElementById('fishing-scoreboard').classList.add('hidden');
+
+            const p1Name = document.getElementById('p1-name-input').value.trim() || 'Pemain 1';
+            const p2Name = document.getElementById('p2-name-input').value.trim() || 'Pemain 2';
+
+            document.getElementById('p1-score-display').innerText = `👤 ${p1Name}: 0 Poin`;
+            const p2Disp = document.getElementById('p2-score-display');
+            if (gameMode === 2) {
+                p2Disp.classList.remove('hidden');
+                p2Disp.innerText = `👥 ${p2Name}: 0 Poin`;
+            } else {
+                p2Disp.classList.add('hidden');
+            }
+
+            p1Score = 0;
+            p2Score = 0;
+            activePlayerTurn = 1;
+
+            canvas = document.getElementById('fishingCanvas');
+            ctx = canvas.getContext('2d');
+            resizeCanvas();
+
+            initSeaAnimals();
+            isGameRunning = true;
+            requestAnimationFrame(gameLoop);
+
+            canvas.onclick = handleCanvasClick;
+        }
+
+        function resizeCanvas() {
+            if (!canvas) return;
+            const container = document.getElementById('canvas-container');
+            canvas.width = container.clientWidth;
+            canvas.height = 480;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+
+        function initSeaAnimals() {
+            seaAnimals = [];
+            const emojis = ['🐟', '🐠', '🐡', '🐙', '🦀', '🦑', '🐬', '🦭', '🦞', '🦐'];
             
-            <div class="bg-sky-50 p-3 rounded-2xl border text-xs text-gray-700" id="question-stimulus">
-              Stimulus cerita singkat...
-            </div>
+            // Generate 15 animals per player mode
+            const totalAnimals = gameMode === 1 ? 15 : 30;
+            const shuffledQ = [...ruleQuestions].sort(() => Math.random() - 0.5);
 
-            <p class="font-bold text-gray-800 text-sm" id="question-text">
-              Pertanyaan soal aturan...
-            </p>
-
-            <div id="question-options" class="space-y-2">
-              <!-- Options rendered dynamically -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Final Scoreboard -->
-        <div id="game-scoreboard" class="hidden bg-yellow-50 border-4 border-yellow-400 p-6 rounded-3xl text-center max-w-md mx-auto space-y-4">
-          <h3 class="text-3xl font-extrabold text-amber-800">🏆 Papan Skor Permainan!</h3>
-          <div id="scoreboard-content" class="space-y-2 text-lg font-bold"></div>
-          <button onclick="startFishingGame()" class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-2 px-6 rounded-full text-sm">
-            🔄 Main Lagi
-          </button>
-        </div>
-
-        <div class="mt-6 text-center">
-          <button onclick="showSection('beranda')" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-full">
-            <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== SECTION 10: TES FORMATIF ==================== -->
-    <section id="sec-tes-formatif" class="hidden space-y-6">
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border-4 border-lime-200">
-        <div class="border-b pb-4 mb-4 flex justify-between items-center">
-          <h2 class="text-2xl sm:text-3xl font-bold text-lime-800 flex items-center gap-3">
-            <i class="fa-solid fa-clipboard-check text-lime-600"></i> Tes Formatif Pembelajaran
-          </h2>
-          <span class="bg-lime-100 text-lime-800 text-xs font-bold px-3 py-1 rounded-full">Wordwall Test</span>
-        </div>
-
-        <div class="w-full flex justify-center overflow-hidden rounded-2xl shadow-lg border">
-          <iframe style="max-width:100%" 
-                  src="https://wordwall.net/embed/869ae74615bb46c9988a2cdd391765e4?themeId=1&templateId=11&fontStackId=0" 
-                  width="1280" 
-                  height="720" 
-                  frameborder="0" 
-                  allowfullscreen></iframe>
-        </div>
-
-        <div class="mt-8 text-center">
-          <button onclick="showSection('beranda')" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-full">
-            <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== SECTION 11: REFLEKSI ==================== -->
-    <section id="sec-refleksi" class="hidden space-y-6">
-      <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border-4 border-yellow-200 max-w-3xl mx-auto">
-        <div class="border-b pb-4 mb-6 text-center">
-          <h2 class="text-2xl sm:text-3xl font-bold text-amber-800 flex items-center justify-center gap-3">
-            <i class="fa-solid fa-face-smile text-yellow-500"></i> Refleksi Pembelajaran Hari Ini
-          </h2>
-          <p class="text-gray-600 text-sm mt-1">Mari ungkapkan pengalaman belajarmu hari ini ya!</p>
-        </div>
-
-        <!-- Mood Selector -->
-        <div class="bg-amber-50 p-6 rounded-2xl text-center space-y-4">
-          <h3 class="font-bold text-amber-900 text-lg">Bagaimana kegiatan belajarmu hari ini?</h3>
-          
-          <div class="flex justify-center gap-8">
-            <!-- Emoji Senang -->
-            <button onclick="selectEmoji('senang')" id="btn-emoji-senang" class="p-4 bg-white rounded-2xl shadow border-4 border-transparent hover:border-green-400 transition transform hover:scale-110 flex flex-col items-center">
-              <span class="text-6xl">😊</span>
-              <span class="text-xs font-bold text-green-700 mt-2">Senang & Paham</span>
-            </button>
-
-            <!-- Emoji Sedih -->
-            <button onclick="selectEmoji('sedih')" id="btn-emoji-sedih" class="p-4 bg-white rounded-2xl shadow border-4 border-transparent hover:border-red-400 transition transform hover:scale-110 flex flex-col items-center">
-              <span class="text-6xl">😢</span>
-              <span class="text-xs font-bold text-red-700 mt-2">Sulit / Sedih</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Reflection Text Area -->
-        <div class="space-y-2">
-          <label class="block font-bold text-gray-800 text-sm">
-            Ceritakan bagaimana kegiatan belajarmu hari ini, bagaimana materinya apakah sulit atau tidak!
-          </label>
-          <textarea id="refleksi-text" rows="5" placeholder="Tuliskan ceritamu di sini... (Contoh: Hari ini saya sangat senang belajar aturan sekolah dan bermain game memancing ikan!)" class="w-full p-4 border-2 border-amber-300 rounded-2xl focus:outline-none focus:border-amber-500 font-medium text-gray-700 shadow-inner"></textarea>
-        </div>
-
-        <button onclick="submitRefleksi()" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3 rounded-xl shadow-md text-base">
-          💾 Simpan Refleksi
-        </button>
-
-        <div id="refleksi-msg" class="hidden p-4 bg-green-100 text-green-800 font-bold rounded-xl text-center">
-          🎉 Terima kasih sudah berbagi cerita! Kamu luar biasa!
-        </div>
-
-        <div class="mt-8 text-center">
-          <button onclick="showSection('beranda')" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-full">
-            <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
-          </button>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-red-800 text-white text-center py-3 text-xs font-medium border-t-4 border-yellow-400">
-    <p>© 2026 SD TARAKANITA 3 - Pendidikan Pancasila Kelas 1 SD</p>
-  </footer>
-
-</div>
-
-<!-- ==================== JAVASCRIPT LOGIC ==================== -->
-<script>
-  // Text-To-Speech Feature for Class 1 Kids
-  function speakText(text) {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel(); // Stop active audio
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'id-ID';
-      utterance.rate = 0.9; // Slightly slower for primary kids
-      utterance.pitch = 1.1; // Cheerful pitch
-      window.speechSynthesis.speak(utterance);
-    } else {
-      alert("Fitur suara tidak didukung oleh browser Anda.");
-    }
-  }
-
-  // Navigation Logic
-  function showSection(sectionId) {
-    // Hide all sections
-    const sections = ['beranda', 'identitas', 'aturan-rumah', 'aturan-sekolah', 'manfaat-aturan', 'nilai-tarakanita', 'video-pembelajaran', 'latihan-linuris', 'game-sekolah', 'game-rumah', 'tes-formatif', 'refleksi'];
-    sections.forEach(id => {
-      const el = document.getElementById('sec-' + id);
-      if (el) el.classList.add('hidden');
-    });
-
-    // Show selected section
-    const activeEl = document.getElementById('sec-' + sectionId);
-    if (activeEl) {
-      activeEl.classList.remove('hidden');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Stop audio speech when navigating
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-    }
-  }
-
-  // Quiz Feedback Helper
-  function checkAnswer(btn, isCorrect) {
-    const parentGrid = btn.parentElement;
-    const buttons = parentGrid.querySelectorAll('button');
-    buttons.forEach(b => {
-      b.classList.remove('bg-green-200', 'bg-red-200', 'border-green-500', 'border-red-500');
-      b.disabled = true;
-    });
-
-    if (isCorrect) {
-      btn.classList.add('bg-green-200', 'border-green-500', 'text-green-900');
-      playSfx(600, 'sine', 0.15); // Friendly chime
-    } else {
-      btn.classList.add('bg-red-200', 'border-red-500', 'text-red-900');
-      playSfx(200, 'sawtooth', 0.2); // Error sound
-    }
-  }
-
-  // Refleksi Logic
-  let selectedMood = '';
-  function selectEmoji(mood) {
-    selectedMood = mood;
-    document.getElementById('btn-emoji-senang').classList.remove('border-green-500', 'bg-green-50');
-    document.getElementById('btn-emoji-sedih').classList.remove('border-red-500', 'bg-red-50');
-
-    if (mood === 'senang') {
-      document.getElementById('btn-emoji-senang').classList.add('border-green-500', 'bg-green-50');
-      speakText('Wah, hebat! Kamu senang belajar hari ini!');
-    } else {
-      document.getElementById('btn-emoji-sedih').classList.add('border-red-500', 'bg-red-50');
-      speakText('Tetap semangat ya! Jangan ragu bertanya pada guru.');
-    }
-  }
-
-  function submitRefleksi() {
-    const text = document.getElementById('refleksi-text').value;
-    if (!selectedMood) {
-      alert("Pilih salah satu emoji terlebih dahulu ya!");
-      return;
-    }
-    document.getElementById('refleksi-msg').classList.remove('hidden');
-    playSfx(800, 'sine', 0.3);
-  }
-
-  // Web Audio Sound Effects Generator
-  let audioCtx = null;
-  function getAudioCtx() {
-    if (!audioCtx) {
-      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    }
-    return audioCtx;
-  }
-
-  function playSfx(freq, type = 'sine', duration = 0.1) {
-    try {
-      const ctx = getAudioCtx();
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = type;
-      osc.frequency.setValueAtTime(freq, ctx.currentTime);
-      gain.gain.setValueAtTime(0.1, ctx.currentTime);
-      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start();
-      osc.stop(ctx.currentTime + duration);
-    } catch(e) {}
-  }
-
-  // Simple Synthesized BGM Loop for Game
-  let bgmInterval = null;
-  let bgmOn = true;
-  function toggleGameBgm() {
-    bgmOn = !bgmOn;
-    document.getElementById('bgm-state').innerText = bgmOn ? 'ON' : 'OFF';
-    if (!bgmOn && bgmInterval) {
-      clearInterval(bgmInterval);
-      bgmInterval = null;
-    } else if (bgmOn) {
-      startBgm();
-    }
-  }
-
-  function startBgm() {
-    if (bgmInterval) clearInterval(bgmInterval);
-    const notes = [261.63, 329.63, 392.00, 523.25, 392.00, 329.63];
-    let idx = 0;
-    bgmInterval = setInterval(() => {
-      if (!bgmOn) return;
-      playSfx(notes[idx], 'triangle', 0.15);
-      idx = (idx + 1) % notes.length;
-    }, 400);
-  }
-
-  // ==================== FISHING GAME ENGINE ====================
-  
-  // 10 Question Bank on Rules at Home
-  const homeRulesQuestions = [
-    {
-      stimulus: "Cerita: Budi selalu tidur jam 8.30 malam agar tidak terlambat bangun pagi.",
-      text: "Mengapa kita harus tidur malam tepat waktu?",
-      options: [
-        { text: "Agar badan sehat & tidak terlambat sekolah", correct: true },
-        { text: "Agar bisa main hp sampai subuh", correct: false },
-        { text: "Agar dimarahi teman", correct: false }
-      ]
-    },
-    {
-      stimulus: "Cerita: Siti melipat selimut dan merapikan bantal setelah bangun tidur.",
-      text: "Merapikan tempat tidur setelah bangun adalah aturan di...",
-      options: [
-        { text: "Sekolah", correct: false },
-        { text: "Rumah", correct: true },
-        { text: "Jalan Raya", correct: false }
-      ]
-    },
-    {
-      stimulus: "Cerita: Setelah makan sore, Edo mengulang membaca buku pelajaran Pendidikan Pancasila.",
-      text: "Tujuan belajar mandiri di rumah adalah...",
-      options: [
-        { text: "Makin pandai dan paham pelajaran", correct: true },
-        { text: "Membuat orang tua bersedih", correct: false },
-        { text: "Agar cepat mengantuk", correct: false }
-      ]
-    },
-    {
-      stimulus: "Cerita: Ani selesai bermain boneka lalu memasukkan mainan ke kotak mainan.",
-      text: "Manfaat merapikan mainan setelah bermain adalah...",
-      options: [
-        { text: "Mainan hilang semua", correct: false },
-        { text: "Rumah menjadi rapi dan aman", correct: true },
-        { text: "Lantai menjadi kotor", correct: false }
-      ]
-    },
-    {
-      stimulus: "Cerita: Sebelum pergi bermain bola, Doni mencium tangan ibu dan bilang hendak bermain.",
-      text: "Sikap berpamitan kepada orang tua menunjukkan rasa...",
-      options: [
-        { text: "Hormat dan patuh", correct: true },
-        { text: "Sombong", correct: false },
-        { text: "Takut", correct: false }
-      ]
-    },
-    {
-      stimulus: "Cerita: Sebelum tidur malam, Rina menggosok giginya dengan pasta gigi.",
-      text: "Menggosok gigi sebelum tidur berguna untuk...",
-      options: [
-        { text: "Menjaga gigi tetap sehat & terhindar kuman", correct: true },
-        { text: "Membuat gigi patah", correct: false },
-        { text: "Supaya lapar", correct: false }
-      ]
-    },
-    {
-      stimulus: "Tabel: Aturan Makan di Rumah -> 1. Cuci tangan, 2. Berdoa, 3. Makan dengan tertib.",
-      text: "Sebelum makan di rumah, hal pertama yang harus dilakukan adalah...",
-      options: [
-        { text: "Langsung mencuci piring", correct: false },
-        { text: "Mencuci tangan dengan bersih", correct: true },
-        { text: "Berlari-lari", correct: false }
-      ]
-    },
-    {
-      stimulus: "Cerita: Ayah baru pulang bekerja dari kantor. Maya menyambut Ayah dengan senyuman.",
-      text: "Sikap Maya saat orang tua pulang bekerja adalah...",
-      options: [
-        { text: "Menyapa dan memberi salam dengan sopan", correct: true },
-        { text: "Meminta hadiah berteriak-teriak", correct: false },
-        { text: "Bersembunyi di bawah kasur", correct: false }
-      ]
-    },
-    {
-      stimulus: "Cerita: Baju kotor bekas pakai dimasukkan Andi ke dalam ember cucian.",
-      text: "Meletakkan baju kotor pada tempatnya termasuk aturan...",
-      options: [
-        { text: "Menjaga kebersihan rumah", correct: true },
-        { text: "Membuat rumah bau", correct: false },
-        { text: "Aturan di kantin", correct: false }
-      ]
-    },
-    {
-      stimulus: "Cerita: Sepatu sekolah dilepas dan diletakkan di rak sepatu depan rumah.",
-      text: "Sepatu yang ditaruh di rak sepatu membuat rumah terlihat...",
-      options: [
-        { text: "Berantakan", correct: false },
-        { text: "Rapi dan indah", correct: true },
-        { text: "Sempit", correct: false }
-      ]
-    }
-  ];
-
-  let gameMode = 1; // 1 or 2 player
-  let player1 = { name: "Pemain 1", score: 0, fishes: [] };
-  let player2 = { name: "Pemain 2", score: 0, fishes: [] };
-  let activeTurnPlayer = 1; // 1 or 2
-  let currentTargetFish = null;
-  let animReqP1, animReqP2;
-
-  function initFishingGame(mode) {
-    gameMode = mode;
-    document.getElementById('game-setup').classList.remove('hidden');
-    document.getElementById('game-canvas-container').classList.add('hidden');
-    document.getElementById('game-scoreboard').classList.add('hidden');
-
-    if (mode === 2) {
-      document.getElementById('player2-input').classList.remove('hidden');
-    } else {
-      document.getElementById('player2-input').classList.add('hidden');
-    }
-  }
-
-  function startFishingGame() {
-    player1.name = document.getElementById('p1-name').value || "Pemain 1";
-    player1.score = 0;
-    player2.name = document.getElementById('p2-name').value || "Pemain 2";
-    player2.score = 0;
-
-    document.getElementById('p1-score').innerText = '0';
-    document.getElementById('p2-score').innerText = '0';
-    document.getElementById('p1-score-display').firstChild.textContent = player1.name + ": ";
-    
-    if (gameMode === 2) {
-      document.getElementById('p2-score-display').classList.remove('hidden');
-      document.getElementById('p2-score-display').firstChild.textContent = player2.name + ": ";
-      document.getElementById('p2-screen').classList.remove('hidden');
-      document.getElementById('canvas-wrapper').classList.replace('grid-cols-1', 'md:grid-cols-2');
-    } else {
-      document.getElementById('p2-score-display').classList.add('hidden');
-      document.getElementById('p2-screen').classList.add('hidden');
-      document.getElementById('canvas-wrapper').classList.replace('md:grid-cols-2', 'grid-cols-1');
-    }
-
-    document.getElementById('game-setup').classList.add('hidden');
-    document.getElementById('game-canvas-container').classList.remove('hidden');
-    document.getElementById('game-scoreboard').classList.add('hidden');
-
-    // Create 15 Fishes for each player (10 standard score 1, 5 bonus score 5)
-    player1.fishes = generateFishList();
-    player2.fishes = generateFishList();
-
-    setupCanvas('canvasP1', player1, 1);
-    if (gameMode === 2) {
-      setupCanvas('canvasP2', player2, 2);
-    }
-
-    startBgm();
-  }
-
-  function generateFishList() {
-    const fishes = [];
-    const emojis = ['🐟', '🐠', '🐡', '🐙', '🦀', '🐬', '🦑', '🦈'];
-    // 10 standard + 5 bonus
-    for (let i = 0; i < 15; i++) {
-      const isBonus = i >= 10;
-      fishes.push({
-        id: i,
-        x: Math.random() * 300 + 50,
-        y: Math.random() * 200 + 80,
-        speed: (Math.random() * 1.5 + 0.8) * (Math.random() > 0.5 ? 1 : -1),
-        emoji: isBonus ? '⭐' : emojis[i % emojis.length],
-        size: isBonus ? 36 : 28,
-        isBonus: isBonus,
-        questionIndex: i % homeRulesQuestions.length,
-        caught: false
-      });
-    }
-    return fishes;
-  }
-
-  function setupCanvas(canvasId, playerObj, playerNum) {
-    const canvas = document.getElementById(canvasId);
-    const ctx = canvas.getContext('2d');
-
-    function resize() {
-      canvas.width = canvas.parentElement.clientWidth;
-      canvas.height = canvas.parentElement.clientHeight;
-    }
-    resize();
-
-    let hookTarget = null;
-    let hookPos = { x: 50, y: 40 };
-
-    canvas.onclick = function(e) {
-      const rect = canvas.getBoundingClientRect();
-      const clickX = e.clientX - rect.left;
-      const clickY = e.clientY - rect.top;
-
-      // Find clicked fish
-      for (let fish of playerObj.fishes) {
-        if (fish.caught) continue;
-        const dist = Math.hypot(fish.x - clickX, fish.y - clickY);
-        if (dist < fish.size + 15) {
-          playSfx(400, 'sine', 0.1);
-          fish.caught = true;
-          activeTurnPlayer = playerNum;
-          currentTargetFish = fish;
-          showFishQuestion(fish, playerObj);
-          break;
-        }
-      }
-    };
-
-    function render() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Draw Fisherman on boat
-      ctx.fillStyle = '#854d0e'; // Boat
-      ctx.beginPath();
-      ctx.arc(60, 50, 40, 0, Math.PI);
-      ctx.fill();
-
-      // Child Fisherman
-      ctx.font = '30px serif';
-      ctx.fillText('👦🎣', 45, 45);
-
-      // Draw sea level
-      ctx.strokeStyle = '#38bdf8';
-      ctx.lineWidth = 3;
-      ctx.beginPath();
-      ctx.moveTo(0, 70);
-      ctx.lineTo(canvas.width, 70);
-      ctx.stroke();
-
-      // Render Fishes
-      let activeCount = 0;
-      for (let fish of playerObj.fishes) {
-        if (fish.caught) continue;
-        activeCount++;
-
-        // Swim move
-        fish.x += fish.speed;
-        if (fish.x > canvas.width - 30 || fish.x < 30) {
-          fish.speed *= -1;
+            for (let i = 0; i < totalAnimals; i++) {
+                const q = shuffledQ[i % shuffledQ.length];
+                seaAnimals.push({
+                    id: i,
+                    x: Math.random() * (canvas.width - 80) + 40,
+                    y: 180 + Math.random() * (canvas.height - 240),
+                    vx: (Math.random() - 0.5) * 2,
+                    vy: (Math.random() - 0.5) * 0.8,
+                    emoji: emojis[i % emojis.length],
+                    size: q.bonus ? 40 : 32,
+                    question: q,
+                    isBonus: !!q.bonus,
+                    caught: false,
+                    assignedPlayer: gameMode === 2 ? (i % 2 === 0 ? 1 : 2) : 1
+                });
+            }
         }
 
-        ctx.font = fish.size + 'px serif';
-        ctx.fillText(fish.emoji, fish.x, fish.y);
+        function gameLoop() {
+            if (!isGameRunning) return;
 
-        // Draw crosshair ring target
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
-        ctx.lineWidth = 1.5;
-        ctx.beginPath();
-        ctx.arc(fish.x + 10, fish.y - 10, fish.size / 1.5, 0, Math.PI * 2);
-        ctx.stroke();
-      }
+            // Clear Background Water
+            ctx.fillStyle = '#0284c7';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      if (playerNum === 1) animReqP1 = requestAnimationFrame(render);
-      else animReqP2 = requestAnimationFrame(render);
+            // Draw Sky / Boat Deck Line
+            ctx.fillStyle = '#38bdf8';
+            ctx.fillRect(0, 0, canvas.width, 100);
 
-      // Check game over
-      if (activeCount === 0) {
-        checkGameOver();
-      }
-    }
+            // Draw Fisherman 1 (Left Side)
+            ctx.font = '40px sans-serif';
+            ctx.fillText('🎣', 40, 90);
+            ctx.font = '12px Fredoka';
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText(document.getElementById('p1-name-input').value || 'P1', 40, 105);
 
-    render();
-  }
+            // Draw Fisherman 2 (Right Side if 2P)
+            if (gameMode === 2) {
+                ctx.font = '40px sans-serif';
+                ctx.fillText('🎣', canvas.width - 80, 90);
+                ctx.font = '12px Fredoka';
+                ctx.fillStyle = '#ffffff';
+                ctx.fillText(document.getElementById('p2-name-input').value || 'P2', canvas.width - 80, 105);
+            }
 
-  function showFishQuestion(fish, playerObj) {
-    const qData = homeRulesQuestions[fish.questionIndex];
-    document.getElementById('question-turn-player').innerText = "Giliran: " + playerObj.name;
-    document.getElementById('question-bonus-tag').innerText = fish.isBonus ? "⭐ SOAL BONUS (+5 POIN!)" : "Soal Standar (+1 Poin)";
-    document.getElementById('question-bonus-tag').className = fish.isBonus ? "bg-amber-200 text-amber-900 font-bold px-3 py-1 rounded-full text-xs" : "bg-sky-100 text-sky-800 font-bold px-3 py-1 rounded-full text-xs";
-    
-    document.getElementById('question-stimulus').innerText = qData.stimulus;
-    document.getElementById('question-text').innerText = qData.text;
+            // Update & Draw Hook 1 Animation
+            if (hookP1.active) {
+                ctx.beginPath();
+                ctx.moveTo(60, 80);
+                ctx.lineTo(hookP1.x, hookP1.y);
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth = 2;
+                ctx.stroke();
 
-    const optContainer = document.getElementById('question-options');
-    optContainer.innerHTML = '';
+                ctx.font = '20px sans-serif';
+                ctx.fillText('🪝', hookP1.x - 10, hookP1.y);
 
-    qData.options.forEach((opt, idx) => {
-      const btn = document.createElement('button');
-      btn.className = "w-full text-left bg-sky-50 hover:bg-sky-100 border-2 border-sky-200 p-3 rounded-xl font-medium text-xs sm:text-sm transition";
-      btn.innerText = String.fromCharCode(65 + idx) + ". " + opt.text;
-      btn.onclick = function() {
-        if (opt.correct) {
-          const points = fish.isBonus ? 5 : 1;
-          playerObj.score += points;
-          playSfx(700, 'sine', 0.2);
-          alert("🎉 Jawaban Benar! Dapat +" + points + " Poin!");
-        } else {
-          playSfx(200, 'sawtooth', 0.2);
-          alert("❌ Jawaban belum tepat!");
+                // Move hook to target
+                hookP1.x += (hookP1.targetX - hookP1.x) * 0.1;
+                hookP1.y += (hookP1.targetY - hookP1.y) * 0.1;
+
+                if (Math.hypot(hookP1.x - hookP1.targetX, hookP1.y - hookP1.targetY) < 10) {
+                    hookP1.active = false;
+                    if (currentFishTarget) triggerQuizModal(currentFishTarget, 1);
+                }
+            }
+
+            // Update & Draw Sea Animals
+            seaAnimals.forEach(anim => {
+                if (anim.caught) return;
+
+                anim.x += anim.vx;
+                anim.y += anim.vy;
+
+                // Bounce off canvas boundaries
+                if (anim.x < 30 || anim.x > canvas.width - 30) anim.vx *= -1;
+                if (anim.y < 140 || anim.y > canvas.height - 30) anim.vy *= -1;
+
+                // Draw Fish
+                ctx.font = `${anim.size}px sans-serif`;
+                ctx.fillText(anim.emoji, anim.x, anim.y);
+
+                // Draw Target Sight Box
+                ctx.strokeStyle = anim.assignedPlayer === 1 ? '#fde047' : '#ec4899';
+                ctx.lineWidth = 1;
+                ctx.strokeRect(anim.x - 5, anim.y - anim.size + 5, anim.size + 10, anim.size + 5);
+            });
+
+            requestAnimationFrame(gameLoop);
         }
 
-        document.getElementById('p1-score').innerText = player1.score;
-        document.getElementById('p2-score').innerText = player2.score;
-        document.getElementById('fish-modal').classList.add('hidden');
-      };
-      optContainer.appendChild(btn);
-    });
+        function handleCanvasClick(e) {
+            if (!isGameRunning || hookP1.active) return;
 
-    document.getElementById('fish-modal').classList.remove('hidden');
-  }
+            const rect = canvas.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const clickY = e.clientY - rect.top;
 
-  function checkGameOver() {
-    const p1Remaining = player1.fishes.filter(f => !f.caught).length;
-    const p2Remaining = gameMode === 2 ? player2.fishes.filter(f => !f.caught).length : 0;
+            // Find clicked fish
+            const clickedFish = seaAnimals.find(anim => {
+                if (anim.caught) return false;
+                const dist = Math.hypot(anim.x - clickX, anim.y - clickY);
+                return dist < 35;
+            });
 
-    if (p1Remaining === 0 && p2Remaining === 0) {
-      if (animReqP1) cancelAnimationFrame(animReqP1);
-      if (animReqP2) cancelAnimationFrame(animReqP2);
+            if (clickedFish) {
+                playAudioTone(440, 'sine', 0.1);
+                currentFishTarget = clickedFish;
 
-      document.getElementById('game-canvas-container').classList.add('hidden');
-      const scoreboard = document.getElementById('game-scoreboard');
-      scoreboard.classList.remove('hidden');
-
-      let winnerHtml = `<div class="p-3 bg-amber-100 rounded-xl">🥇 ${player1.name}: ${player1.score} Poin</div>`;
-      if (gameMode === 2) {
-        winnerHtml += `<div class="p-3 bg-blue-100 rounded-xl">🥈 ${player2.name}: ${player2.score} Poin</div>`;
-        if (player1.score > player2.score) {
-          winnerHtml += `<div class="text-green-700 font-extrabold mt-2">Selamat ${player1.name} Menang! 🎉</div>`;
-        } else if (player2.score > player1.score) {
-          winnerHtml += `<div class="text-green-700 font-extrabold mt-2">Selamat ${player2.name} Menang! 🎉</div>`;
-        } else {
-          winnerHtml += `<div class="text-purple-700 font-extrabold mt-2">Hasil Seri! Luar Biasa! 🤝</div>`;
+                hookP1.targetX = clickedFish.x;
+                hookP1.targetY = clickedFish.y;
+                hookP1.x = 60;
+                hookP1.y = 80;
+                hookP1.active = true;
+            }
         }
-      }
-      document.getElementById('scoreboard-content').innerHTML = winnerHtml;
-    }
-  }
 
-  // Initialize view to beranda
-  window.onload = function() {
-    showSection('beranda');
-  };
-</script>
+        function triggerQuizModal(fish, playerNum) {
+            const modal = document.getElementById('game-quiz-modal');
+            const badge = document.getElementById('quiz-player-badge');
+            const bonusBadge = document.getElementById('quiz-bonus-badge');
+            const qText = document.getElementById('quiz-question-text');
+            const optsContainer = document.getElementById('quiz-options');
+
+            const p1Name = document.getElementById('p1-name-input').value || 'Pemain 1';
+            const p2Name = document.getElementById('p2-name-input').value || 'Pemain 2';
+
+            badge.innerText = `Giliran: ${playerNum === 1 ? p1Name : p2Name}`;
+
+            if (fish.isBonus) {
+                bonusBadge.classList.remove('hidden');
+            } else {
+                bonusBadge.classList.add('hidden');
+            }
+
+            qText.innerText = fish.question.q;
+            optsContainer.innerHTML = fish.question.opts.map((optText, idx) => `
+                <button onclick="answerFishingQuiz(${idx}, ${fish.question.ans}, ${fish.isBonus ? 5 : 1}, ${playerNum}, ${fish.id})" class="p-3 border-2 border-amber-300 rounded-xl hover:bg-amber-100 text-left font-bold text-gray-800 text-sm transition">
+                    ${['A', 'B', 'C'][idx]}. ${optText}
+                </button>
+            `).join('');
+
+            modal.classList.remove('hidden');
+        }
+
+        function answerFishingQuiz(selectedIdx, correctIdx, points, playerNum, fishId) {
+            document.getElementById('game-quiz-modal').classList.add('hidden');
+
+            const targetFish = seaAnimals.find(a => a.id === fishId);
+            if (targetFish) targetFish.caught = true;
+
+            if (selectedIdx === correctIdx) {
+                playAudioTone(800, 'sine', 0.2);
+                if (playerNum === 1) {
+                    p1Score += points;
+                } else {
+                    p2Score += points;
+                }
+            } else {
+                playAudioTone(200, 'sawtooth', 0.3);
+            }
+
+            // Update displays
+            const p1Name = document.getElementById('p1-name-input').value || 'Pemain 1';
+            const p2Name = document.getElementById('p2-name-input').value || 'Pemain 2';
+            document.getElementById('p1-score-display').innerText = `👤 ${p1Name}: ${p1Score} Poin`;
+            document.getElementById('p2-score-display').innerText = `👥 ${p2Name}: ${p2Score} Poin`;
+
+            // Switch player turn if 2P
+            if (gameMode === 2) {
+                activePlayerTurn = activePlayerTurn === 1 ? 2 : 1;
+            }
+
+            // Check if all fish caught
+            const remaining = seaAnimals.filter(a => !a.caught);
+            if (remaining.length === 0) {
+                endFishingGame();
+            }
+        }
+
+        function endFishingGame() {
+            isGameRunning = false;
+            document.getElementById('fishing-game-area').classList.add('hidden');
+            const scoreboard = document.getElementById('fishing-scoreboard');
+            const details = document.getElementById('score-details');
+
+            const p1Name = document.getElementById('p1-name-input').value || 'Pemain 1';
+            const p2Name = document.getElementById('p2-name-input').value || 'Pemain 2';
+
+            if (gameMode === 1) {
+                details.innerHTML = `
+                    <div class="bg-yellow-100 p-4 rounded-2xl border border-yellow-300">
+                        <p class="text-xl font-bold text-yellow-900">${p1Name}</p>
+                        <p class="text-3xl font-black text-yellow-700 mt-1">${p1Score} POIN</p>
+                        <p class="text-xs text-gray-600 mt-2">Hebat sekali! Kamu sudah memahami aturan di rumah dengan baik!</p>
+                    </div>
+                `;
+            } else {
+                let winnerText = p1Score > p2Score ? `🎉 Pemenangnya adalah ${p1Name}!` : (p2Score > p1Score ? `🎉 Pemenangnya adalah ${p2Name}!` : '🤝 Hasil Seri!');
+                details.innerHTML = `
+                    <div class="bg-yellow-100 p-4 rounded-2xl border border-yellow-300 space-y-2">
+                        <h4 class="text-xl font-black text-yellow-900">${winnerText}</h4>
+                        <div class="grid grid-cols-2 gap-2 mt-2">
+                            <div class="bg-white p-3 rounded-xl border">
+                                <p class="text-sm font-bold text-blue-800">${p1Name}</p>
+                                <p class="text-2xl font-black text-blue-600">${p1Score} Poin</p>
+                            </div>
+                            <div class="bg-white p-3 rounded-xl border">
+                                <p class="text-sm font-bold text-pink-800">${p2Name}</p>
+                                <p class="text-2xl font-black text-pink-600">${p2Score} Poin</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            scoreboard.classList.remove('hidden');
+        }
+
+        function resetFishingGame() {
+            document.getElementById('fishing-scoreboard').classList.add('hidden');
+            document.getElementById('fishing-setup').classList.remove('hidden');
+        }
+
+        // Web Audio Synthesizer sound generator
+        function playAudioTone(freq, type, duration) {
+            try {
+                const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = type;
+                osc.frequency.value = freq;
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                gain.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + duration);
+                setTimeout(() => audioCtx.close(), duration * 1000 + 100);
+            } catch (e) {
+                // Audio context fallback
+            }
+        }
+
+        // Initialize on load
+        window.onload = function() {
+            renderRefleksi();
+        };
+    </script>
 </body>
 </html>
